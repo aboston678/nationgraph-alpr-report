@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>The RFP Is the Last Signal | NationGraph</title>
-<meta name="description" content="By the time an ALPR bid posts, the buying motion has been visible for months — in council minutes, budgets, grants, and sole-source letters. NationGraph reconstructs the trail before the market sees a formal RFP." />
-<meta property="og:title" content="The RFP Is the Last Signal — NationGraph Finds the Ones Before It" />
-<meta property="og:description" content="A NationGraph public-safety market brief on license-plate readers: track the breadcrumbs of buying intent before the RFP drops." />
+<title>The RFP Is the Last Signal, Not the First | NationGraph</title>
+<meta name="description" content="In the police license-plate-reader market, by the time the bid posts the deal is usually already shaped. NationGraph reconstructs the buying motion months before the RFP — proven, agency by agency." />
+<meta property="og:title" content="The RFP Is the Last Signal, Not the First" />
+<meta property="og:description" content="A NationGraph market brief: the bid is where the deal ends, not where it begins — and here is the public trail that proves it." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -25,183 +25,146 @@
   html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
   body{margin:0; background:var(--paper); color:var(--ink); font-family:"Inter",system-ui,-apple-system,sans-serif; font-size:17.5px; line-height:1.68; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
   .num{font-variant-numeric:tabular-nums; letter-spacing:-.01em;}
-  h1,h2,h3{margin:0; font-family:"Fraunces",serif; font-weight:600; line-height:1.06; letter-spacing:-.015em;}
-  .wrap{max-width:1200px; margin:0 auto; padding:0 32px;}
-  .narrow{max-width:820px;}
+  h1,h2,h3{margin:0; font-family:"Fraunces",serif; font-weight:600; line-height:1.07; letter-spacing:-.015em;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 32px;}
+  .narrow{max-width:760px;}
   a{color:var(--teal-deep); text-decoration:none;}
   .eyebrow{font-family:"JetBrains Mono",monospace; text-transform:uppercase; letter-spacing:.16em; font-size:12px; font-weight:600;}
   .reveal{opacity:0; transform:translateY(22px); transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);}
   .reveal.in{opacity:1; transform:none;}
 
-  .topbar{position:sticky; top:0; z-index:60; background:rgba(5,15,34,.78); backdrop-filter:blur(14px); border-bottom:1px solid rgba(255,255,255,.07);}
-  .topbar .wrap{display:flex; align-items:center; justify-content:space-between; height:62px;}
+  .topbar{position:sticky; top:0; z-index:60; background:rgba(5,15,34,.8); backdrop-filter:blur(14px); border-bottom:1px solid rgba(255,255,255,.07);}
+  .topbar .wrap{display:flex; align-items:center; justify-content:space-between; height:60px;}
   .brand{display:flex; align-items:center; gap:11px;}
-  .brand .name{font-family:"Fraunces",serif; font-weight:600; font-size:20px; color:#fff; letter-spacing:-.01em;}
-  .brand .name b{color:var(--teal-bright); font-weight:600;}
+  .brand .name{font-family:"Fraunces",serif; font-weight:600; font-size:20px; color:#fff;}
+  .brand .name b{color:var(--teal-bright);}
   .topbar .tag{font-family:"JetBrains Mono",monospace; color:#94A6BA; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase;}
   @media(max-width:680px){.topbar .tag{display:none}}
-
-  .secnav{position:sticky; top:62px; z-index:55; background:rgba(247,248,251,.94); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
-  .secnav .inner{max-width:1200px; margin:0 auto; padding:0 32px; display:flex; gap:4px; height:48px; align-items:center; overflow-x:auto; scrollbar-width:none;}
+  .secnav{position:sticky; top:60px; z-index:55; background:rgba(247,248,251,.94); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+  .secnav .inner{max-width:1080px; margin:0 auto; padding:0 32px; display:flex; gap:4px; height:46px; align-items:center; overflow-x:auto; scrollbar-width:none;}
   .secnav .inner::-webkit-scrollbar{display:none;}
-  .secnav a{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.03em; color:var(--muted); padding:7px 11px; border-radius:8px; white-space:nowrap; text-transform:uppercase; transition:.15s;}
+  .secnav a{font-family:"JetBrains Mono",monospace; font-size:11px; color:var(--muted); padding:7px 11px; border-radius:8px; white-space:nowrap; text-transform:uppercase; transition:.15s;}
   .secnav a:hover{background:var(--teal-ghost); color:var(--teal-deep);}
 
-  .hero{position:relative; background:radial-gradient(1100px 600px at 82% -10%, rgba(46,220,201,.20), transparent 58%), radial-gradient(900px 500px at 5% 110%, rgba(16,182,165,.10), transparent 60%), linear-gradient(180deg,var(--navy-950),var(--navy-850)); color:#EAF1F8; padding:80px 0 88px; overflow:hidden;}
+  .hero{position:relative; background:radial-gradient(1100px 600px at 82% -10%, rgba(46,220,201,.20), transparent 58%), linear-gradient(180deg,var(--navy-950),var(--navy-850)); color:#EAF1F8; padding:88px 0 96px; overflow:hidden;}
   .hero:before{content:""; position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px); background-size:52px 52px; mask-image:radial-gradient(800px 460px at 72% 8%,#000,transparent 72%); pointer-events:none;}
   .hero .wrap{position:relative; z-index:1;}
   .hero .eyebrow{color:var(--teal-bright); display:inline-flex; gap:11px; align-items:center; margin-bottom:28px;}
   .hero .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--teal-bright); box-shadow:0 0 0 4px rgba(46,220,201,.16);}
-  h1.title{font-size:clamp(40px,6.6vw,76px); font-weight:600; color:#fff; max-width:17ch; letter-spacing:-.025em; line-height:1.0;}
+  h1.title{font-size:clamp(42px,7vw,80px); font-weight:600; color:#fff; max-width:15ch; letter-spacing:-.025em; line-height:.99;}
   h1.title em{font-style:italic; color:var(--teal-bright);}
-  .sub{margin-top:28px; max-width:62ch; font-size:20px; line-height:1.55; color:#C2D0E0;}
-  .sub b{color:#fff; font-weight:600;} .sub .hl{color:var(--teal-bright); font-weight:600;}
-  .meta-row{margin-top:34px; display:flex; flex-wrap:wrap; gap:10px 14px; font-family:"JetBrains Mono",monospace; font-size:11.5px; letter-spacing:.04em; color:#8FA3B8;}
-  .meta-row span{border:1px solid rgba(255,255,255,.12); border-radius:999px; padding:6px 13px;}
-  .meta-row b{color:#CBD8E6; font-weight:600;}
+  .sub{margin-top:28px; max-width:60ch; font-size:21px; line-height:1.5; color:#C2D0E0;}
+  .sub b{color:#fff;} .sub .hl{color:var(--teal-bright); font-weight:600;}
+  .meta-row{margin-top:34px; display:flex; flex-wrap:wrap; gap:10px 14px; font-family:"JetBrains Mono",monospace; font-size:11.5px; color:#8FA3B8;}
+  .meta-row span{border:1px solid rgba(255,255,255,.12); border-radius:999px; padding:6px 13px;} .meta-row b{color:#CBD8E6;}
 
   .band{margin-top:-46px; position:relative; z-index:10;}
   .statband3{display:grid; grid-template-columns:1fr 1fr 1fr; gap:0; background:var(--card); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow-lg); overflow:hidden;}
   @media(max-width:680px){.statband3{grid-template-columns:1fr}}
-  .statband3 .c{padding:26px 26px; border-right:1px solid var(--line);}
-  .statband3 .c:last-child{border-right:none}
+  .statband3 .c{padding:26px; border-right:1px solid var(--line);} .statband3 .c:last-child{border-right:none}
   @media(max-width:680px){.statband3 .c{border-right:none; border-bottom:1px solid var(--line)}}
   .statband3 .big{font-family:"Fraunces",serif; font-weight:600; font-size:46px; color:var(--ink); line-height:1; letter-spacing:-.02em;}
-  .statband3 .lbl{margin-top:11px; font-family:"JetBrains Mono",monospace; font-size:11.5px; color:var(--muted); line-height:1.5;} .statband3 .lbl b{color:var(--ink);}
+  .statband3 .lbl{margin-top:10px; font-family:"JetBrains Mono",monospace; font-size:11.5px; color:var(--muted); line-height:1.5;} .statband3 .lbl b{color:var(--ink);}
 
-  section{padding:54px 0; position:relative; scroll-margin-top:120px;}
+  section{padding:58px 0; position:relative; scroll-margin-top:116px;}
   .sec-num{font-family:"JetBrains Mono",monospace; font-size:12px; letter-spacing:.18em; color:var(--teal-deep); font-weight:600; margin-bottom:16px;}
   .sec-num:before{content:""; display:inline-block; width:26px; height:1.5px; background:var(--teal); vertical-align:middle; margin-right:12px;}
-  h2{font-size:clamp(27px,3.6vw,40px); font-weight:600; color:var(--ink); max-width:24ch;}
+  h2{font-size:clamp(28px,4vw,42px); font-weight:600; color:var(--ink); max-width:22ch;}
   h2 .accent{color:var(--teal-deep);}
-  .dek{color:var(--muted); font-size:18.5px; margin:18px 0 0; max-width:68ch; line-height:1.6;}
-  p.body{color:#33485E; max-width:70ch;} p.body b{color:var(--ink);}
-  .subhead{font-family:"JetBrains Mono",monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--teal-deep); font-weight:700; margin:28px 0 14px;}
+  .dek{color:var(--muted); font-size:19px; margin:18px 0 0; max-width:66ch; line-height:1.6;}
+  p.body{color:#33485E; max-width:68ch;} p.body b{color:var(--ink);}
+  .refrain{font-family:"Fraunces",serif; font-style:italic; font-size:22px; color:var(--teal-deep); max-width:60ch; margin-top:22px;}
 
   .dark{background:linear-gradient(180deg,var(--navy-900),var(--navy-850)); color:#E7EFF8;}
   .dark h2{color:#fff;} .dark .dek{color:#A9BBCE;} .dark .sec-num{color:var(--teal-bright);} .dark .sec-num:before{background:var(--teal-bright);}
 
   .card{background:var(--card); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow);}
-  .pad{padding:32px 34px;}
-  .grid-2{display:grid; grid-template-columns:1.1fr .9fr; gap:24px;}
-  @media(max-width:880px){.grid-2{grid-template-columns:1fr}}
+  .pad{padding:30px 32px;}
+  .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+  @media(max-width:820px){.grid-2{grid-template-columns:1fr}}
   .chart-h{font-family:"JetBrains Mono",monospace; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); margin:0 0 4px;}
-  .chart-t{font-family:"Fraunces",serif; font-weight:600; font-size:20px; color:var(--ink); margin:0 0 22px;}
+  .chart-t{font-family:"Fraunces",serif; font-weight:600; font-size:19px; color:var(--ink); margin:0 0 20px;}
 
-  .bars{display:flex; flex-direction:column; gap:14px;}
-  .bar-row{display:grid; grid-template-columns:158px 1fr 44px; align-items:center; gap:14px;}
-  @media(max-width:560px){.bar-row{grid-template-columns:108px 1fr 38px}}
+  .bars{display:flex; flex-direction:column; gap:13px;}
+  .bar-row{display:grid; grid-template-columns:150px 1fr 44px; align-items:center; gap:14px;}
+  @media(max-width:560px){.bar-row{grid-template-columns:104px 1fr 38px}}
   .bar-row .k{font-size:14px; color:var(--ink); font-weight:500; text-align:right; line-height:1.2;}
-  .bar-row .k small{display:block; color:var(--faint); font-weight:500; font-size:11px; font-family:"JetBrains Mono",monospace;}
-  .track{height:30px; background:#EEF2F7; border-radius:8px; overflow:hidden;}
+  .bar-row .k small{display:block; color:var(--faint); font-weight:500; font-size:10.5px; font-family:"JetBrains Mono",monospace;}
+  .track{height:28px; background:#EEF2F7; border-radius:8px; overflow:hidden;}
   .fill{height:100%; width:0; border-radius:8px; background:linear-gradient(90deg,var(--teal-deep),var(--teal)); transition:width 1.1s cubic-bezier(.2,.7,.2,1);}
-  .bar-row .v{font-family:"JetBrains Mono",monospace; font-size:14px; font-weight:600; color:var(--ink); text-align:left;}
+  .bar-row .v{font-family:"JetBrains Mono",monospace; font-size:14px; font-weight:600; color:var(--ink);}
 
-  .vbars{display:flex; align-items:flex-end; gap:10px; height:230px; padding-top:14px;}
-  .vcol{flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; height:100%;}
-  .vcol .vv{font-family:"JetBrains Mono",monospace; font-size:12px; font-weight:700; color:var(--ink); margin-bottom:7px;}
-  .vcol .vbar{width:100%; max-width:66px; height:0; border-radius:7px 7px 0 0; background:linear-gradient(180deg,var(--teal),var(--teal-deep)); transition:height 1.1s cubic-bezier(.2,.7,.2,1);}
-  .vcol.hot .vbar{background:linear-gradient(180deg,var(--coral),var(--coral-deep));}
-  .vcol .vl{margin-top:11px; font-family:"JetBrains Mono",monospace; font-size:10.5px; color:var(--muted); text-align:center; line-height:1.3;}
-
-  .pull{display:flex; gap:24px; align-items:flex-start; margin-top:26px;}
+  .pull{display:flex; gap:24px; align-items:flex-start; margin-top:24px;}
   .pull .qn{font-family:"Fraunces",serif; font-weight:600; font-size:68px; color:var(--teal-deep); line-height:.85; letter-spacing:-.03em; flex:0 0 auto;}
-  .pull .qt{font-size:17px; color:#33485E; max-width:52ch; padding-top:6px;} .pull .qt b{color:var(--ink);}
-
-  /* lifecycle */
-  .life{display:grid; grid-template-columns:repeat(6,1fr); gap:10px; margin-top:14px;}
-  @media(max-width:820px){.life{grid-template-columns:repeat(2,1fr)}}
-  .stage{border:1px solid var(--line); border-radius:12px; padding:16px 15px 18px; background:var(--card); position:relative; box-shadow:var(--shadow); overflow:hidden;}
-  .stage:before{content:""; position:absolute; left:0; right:0; top:0; height:4px; background:#C7D0DB;}
-  .stage.adv:before{background:linear-gradient(90deg,var(--teal-bright),var(--teal-deep));}
-  .stage .sn{font-family:"JetBrains Mono",monospace; font-size:10.5px; color:var(--faint); font-weight:700;}
-  .stage .stt{font-family:"Fraunces",serif; font-weight:600; font-size:15px; color:var(--ink); margin:9px 0 6px; line-height:1.18;}
-  .stage .se{font-size:12.5px; color:var(--muted); line-height:1.45;}
-  .life-legend{display:flex; gap:20px; margin-top:14px; font-family:"JetBrains Mono",monospace; font-size:11.5px; color:var(--muted); flex-wrap:wrap;}
-  .life-legend .sw{display:inline-block; width:16px; height:4px; border-radius:2px; vertical-align:middle; margin-right:6px;}
-
-  /* tables */
-  .tablewrap{overflow-x:auto; border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); background:var(--card);}
-  table{border-collapse:collapse; width:100%; min-width:620px; font-size:14.5px;}
-  thead th{font-family:"JetBrains Mono",monospace; font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); text-align:left; padding:15px 20px; border-bottom:1px solid var(--line-2); font-weight:600;}
-  tbody td{padding:14px 20px; border-bottom:1px solid var(--line); color:#33485E; vertical-align:top;}
-  tbody tr:last-child td{border-bottom:none;}
-  tbody tr:hover{background:#FAFCFE;}
-  td .ag{font-weight:600; color:var(--ink);}
-  table.tt td.trad{color:var(--muted);} table.tt td.ng{background:rgba(16,182,165,.07);} table.tt td.ng b{color:var(--ink);}
-  table.sig td.sg{font-weight:600;color:var(--ink);}
-  table.valid td.our{background:rgba(16,182,165,.07);} table.valid td.our b{color:var(--ink);}
-  .match{font-family:"JetBrains Mono",monospace; font-weight:700; color:var(--teal-deep); white-space:nowrap;}
-  .pill{font-family:"JetBrains Mono",monospace; font-size:10.5px; font-weight:600; padding:4px 10px; border-radius:999px; letter-spacing:.03em; white-space:nowrap;}
-  .pill.open{background:var(--teal-ghost); color:var(--teal-deep);} .pill.sole{background:rgba(240,98,60,.12); color:var(--coral-deep);}
-  .st-tag{font-family:"JetBrains Mono",monospace; font-weight:600; font-size:11px; color:var(--teal-deep); background:var(--teal-ghost); padding:3px 8px; border-radius:6px;}
+  .pull .qt{font-size:17px; color:#33485E; max-width:50ch; padding-top:6px;} .pull .qt b{color:var(--ink);}
 
   /* deal timeline */
-  .dealcard{display:flex; flex-wrap:wrap; gap:12px 26px; align-items:center; background:var(--card); border:1px solid var(--line); border-left:4px solid var(--teal); border-radius:14px; padding:18px 22px; box-shadow:var(--shadow); margin-top:26px;}
-  .dealcard .nm{font-family:"Fraunces",serif; font-weight:600; font-size:20px; color:var(--ink);}
-  .dealcard .f{font-family:"JetBrains Mono",monospace; font-size:11.5px; color:var(--muted); margin-top:4px; line-height:1.5;} .dealcard .f b{color:var(--ink); font-weight:600;}
+  .dealcard{display:flex; flex-wrap:wrap; gap:12px 26px; align-items:center; background:var(--card); border:1px solid var(--line); border-left:4px solid var(--teal); border-radius:14px; padding:18px 22px; box-shadow:var(--shadow); margin-top:24px;}
+  .dealcard.ondark{background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.12); border-left-color:var(--teal-bright);}
+  .dealcard .nm{font-family:"Fraunces",serif; font-weight:600; font-size:20px; color:var(--ink);} .dealcard.ondark .nm{color:#fff;}
+  .dealcard .f{font-family:"JetBrains Mono",monospace; font-size:11.5px; color:var(--muted); margin-top:4px; line-height:1.5;} .dealcard .f b{color:var(--ink);} .dealcard.ondark .f{color:#8FA3B8;} .dealcard.ondark .f b{color:#fff;}
   .dealcard .tags{display:flex; gap:8px; margin-left:auto; flex-wrap:wrap;}
   .dealcard .ftag{font-family:"JetBrains Mono",monospace; font-size:10.5px; font-weight:700; padding:6px 11px; border-radius:7px; background:var(--teal-ghost); color:var(--teal-deep);}
-  .timeline{position:relative; margin-top:30px; padding-left:36px; max-width:900px;}
+  .timeline{position:relative; margin-top:28px; padding-left:36px; max-width:900px;}
   .timeline:before{content:""; position:absolute; left:9px; top:8px; bottom:14px; width:2px; background:linear-gradient(180deg,var(--teal),var(--line-2));}
-  .tl{position:relative; padding-bottom:20px;}
-  .tl:last-child{padding-bottom:0;}
+  .dark .timeline:before{background:linear-gradient(180deg,var(--teal),rgba(255,255,255,.15));}
+  .tl{position:relative; padding-bottom:20px;} .tl:last-child{padding-bottom:0;}
   .tl:before{content:""; position:absolute; left:-32px; top:3px; width:14px; height:14px; border-radius:50%; background:var(--teal); border:3px solid #fff; box-shadow:0 0 0 1.5px var(--teal);}
+  .dark .tl:before{border-color:var(--navy-850);}
   .tl.last:before{background:var(--coral); box-shadow:0 0 0 1.5px var(--coral);}
   .tl .top{display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:5px;}
-  .tl .d{font-family:"JetBrains Mono",monospace; font-weight:700; font-size:13px; color:var(--ink);}
+  .tl .d{font-family:"JetBrains Mono",monospace; font-weight:700; font-size:13px; color:var(--ink);} .dark .tl .d{color:#fff;}
   .tl .typ{font-family:"JetBrains Mono",monospace; font-size:10px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; padding:3px 8px; border-radius:6px; background:var(--teal-ghost); color:var(--teal-deep);}
-  .tl .typ.bidfeed{background:rgba(240,98,60,.12); color:var(--coral-deep);}
-  .tl .ti{font-size:15.5px; color:#33485E; line-height:1.45;} .tl .ti b{color:var(--ink); font-weight:600;}
-  .tl .src{font-family:"JetBrains Mono",monospace; font-size:11px; color:var(--teal-deep); margin-top:4px; display:inline-block;}
+  .tl .typ.bidfeed{background:rgba(240,98,60,.14); color:#F4A78F;}
+  .tl .ti{font-size:15.5px; color:#33485E; line-height:1.45;} .tl .ti b{color:var(--ink);} .dark .tl .ti{color:#C2D0E0;} .dark .tl .ti b{color:#fff;}
+  .tl .src{font-family:"JetBrains Mono",monospace; font-size:11px; color:var(--teal-deep); margin-top:4px; display:inline-block;} .dark .tl .src{color:var(--teal-bright);}
 
-  /* what others miss */
-  .miss{background:#FFF7F3; border:1px solid #F4C3B0; border-left:4px solid var(--coral); border-radius:12px; padding:14px 18px; margin-top:18px; max-width:78ch;}
-  .miss .h{font-family:"JetBrains Mono",monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--coral-deep); font-weight:700; margin-bottom:5px;}
-  .miss p{margin:0; font-size:14.5px; color:#33485E;} .miss b{color:var(--ink);}
+  /* lifecycle */
+  .life{display:grid; grid-template-columns:repeat(6,1fr); gap:9px; margin-top:14px;}
+  @media(max-width:820px){.life{grid-template-columns:repeat(2,1fr)}}
+  .stage{border:1px solid var(--line); border-radius:12px; padding:15px 14px 16px; background:var(--card); position:relative; box-shadow:var(--shadow); overflow:hidden;}
+  .stage:before{content:""; position:absolute; left:0; right:0; top:0; height:4px; background:#C7D0DB;}
+  .stage.adv:before{background:linear-gradient(90deg,var(--teal-bright),var(--teal-deep));}
+  .stage .sn{font-family:"JetBrains Mono",monospace; font-size:10px; color:var(--faint); font-weight:700;}
+  .stage .stt{font-family:"Fraunces",serif; font-weight:600; font-size:14.5px; color:var(--ink); margin:8px 0 5px; line-height:1.15;}
+  .stage .se{font-size:12px; color:var(--muted); line-height:1.4;}
+  .life-legend{display:flex; gap:20px; margin-top:14px; font-family:"JetBrains Mono",monospace; font-size:11px; color:var(--muted); flex-wrap:wrap;}
+  .life-legend .sw{display:inline-block; width:16px; height:4px; border-radius:2px; vertical-align:middle; margin-right:6px;}
 
-  /* map */
-  .mapwrap{position:relative; background:var(--card); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); padding:18px 18px 16px;}
-  #usmap svg{width:100%; height:auto; display:block;}
-  #usmap .st2{transition:stroke .12s, opacity .12s; cursor:pointer;}
-  #usmap .st2:hover{stroke:#0A1A30; stroke-width:1.4; opacity:.9;}
-  .maptip{position:absolute; pointer-events:none; left:0; top:0; background:#0A1A30; color:#fff; font-family:"JetBrains Mono",monospace; font-size:12px; padding:7px 11px; border-radius:8px; box-shadow:var(--shadow-lg); opacity:0; transform:translate(-50%,-130%); white-space:nowrap; transition:opacity .12s; z-index:5;}
-  .maptip b{color:var(--teal-bright); font-weight:700;}
-  .maplegend{display:flex; gap:14px; flex-wrap:wrap; align-items:center; margin-top:8px; font-family:"JetBrains Mono",monospace; font-size:11px; color:var(--muted);}
-  .maplegend .sw{display:inline-block; width:13px; height:13px; border-radius:3px; vertical-align:middle; margin-right:5px;}
+  .tablewrap{overflow-x:auto; border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); background:var(--card);}
+  table{border-collapse:collapse; width:100%; min-width:600px; font-size:14.5px;}
+  thead th{font-family:"JetBrains Mono",monospace; font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); text-align:left; padding:14px 18px; border-bottom:1px solid var(--line-2); font-weight:600;}
+  tbody td{padding:13px 18px; border-bottom:1px solid var(--line); color:#33485E; vertical-align:top;} tbody tr:last-child td{border-bottom:none;}
+  td.our{background:rgba(16,182,165,.07);} td.our b{color:var(--ink);}
+  .match{font-family:"JetBrains Mono",monospace; font-weight:700; color:var(--teal-deep);}
 
-  /* workflow */
-  .flow{display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-top:24px;}
-  @media(max-width:820px){.flow{grid-template-columns:1fr 1fr}}
-  .flowstep{background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.1); border-radius:12px; padding:20px 18px;}
-  .flowstep .n{font-family:"JetBrains Mono",monospace; font-weight:700; color:var(--teal-bright); font-size:12px;}
-  .flowstep h4{font-family:"Fraunces",serif; font-weight:600; font-size:17px; color:#fff; margin:8px 0 6px;}
-  .flowstep p{margin:0; color:#A9BBCE; font-size:13.5px; line-height:1.5;}
+  .miss{background:#FFF7F3; border:1px solid #F4C3B0; border-left:4px solid var(--coral); border-radius:12px; padding:14px 18px; margin-top:20px; max-width:80ch;}
+  .miss.ondark{background:rgba(240,98,60,.08); border-color:rgba(240,98,60,.3);}
+  .miss .h{font-family:"JetBrains Mono",monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--coral-deep); font-weight:700; margin-bottom:5px;} .miss.ondark .h{color:#F4A78F;}
+  .miss p{margin:0; font-size:14.5px; color:#33485E;} .miss b{color:var(--ink);} .miss.ondark p{color:#C2D0E0;} .miss.ondark b{color:#fff;}
 
-  .tk-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:20px;}
+  .tk-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:18px;}
   @media(max-width:760px){.tk-grid{grid-template-columns:1fr}}
-  .tk{background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.10); border-radius:var(--r); padding:26px; transition:.3s;}
-  .tk:hover{border-color:rgba(46,220,201,.4); background:rgba(46,220,201,.05);}
-  .tk .n{font-family:"JetBrains Mono",monospace; font-weight:700; color:var(--teal-bright); font-size:12.5px;}
-  .tk h3{font-size:19px; color:#fff; margin:11px 0 8px; font-weight:600;} .tk p{margin:0; color:#A9BBCE; font-size:14.5px; line-height:1.6;}
+  .tk{background:#fff; border:1px solid var(--line); border-radius:var(--r); padding:24px; box-shadow:var(--shadow);}
+  .tk .n{font-family:"JetBrains Mono",monospace; font-weight:700; color:var(--teal-deep); font-size:12.5px;}
+  .tk h3{font-size:18px; color:var(--ink); margin:10px 0 7px; font-weight:600;} .tk p{margin:0; color:var(--muted); font-size:14.5px; line-height:1.55;}
 
   .note{font-family:"JetBrains Mono",monospace; font-size:11.5px; color:var(--faint); margin-top:16px; line-height:1.6;}
 
-  footer{background:var(--navy-950); color:#9FB1C5; padding:62px 0 48px;}
-  .cta{background:linear-gradient(115deg,var(--navy-800),#0c3057); border:1px solid rgba(46,220,201,.24); border-radius:22px; padding:44px 44px; box-shadow:var(--shadow);}
+  footer{background:var(--navy-950); color:#9FB1C5; padding:60px 0 46px;}
+  .cta{background:linear-gradient(115deg,var(--navy-800),#0c3057); border:1px solid rgba(46,220,201,.24); border-radius:22px; padding:44px; box-shadow:var(--shadow);}
   .cta .big{font-family:"Fraunces",serif; font-weight:600; color:#fff; font-size:clamp(24px,3vw,32px); line-height:1.18; max-width:24ch;} .cta .big .accent{color:var(--teal-bright);}
   .cta .row{display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap; margin-top:20px;}
-  .cta p{color:#A9BBCE; margin:0; max-width:52ch; font-size:15.5px;}
-  .btn{background:var(--teal); color:#042521; font-weight:700; padding:16px 26px; border-radius:12px; font-family:"JetBrains Mono",monospace; font-size:14px; letter-spacing:.03em; white-space:nowrap; transition:.2s;}
+  .cta p{color:#A9BBCE; margin:0; max-width:50ch; font-size:15.5px;}
+  .btn{background:var(--teal); color:#042521; font-weight:700; padding:16px 26px; border-radius:12px; font-family:"JetBrains Mono",monospace; font-size:14px; white-space:nowrap; transition:.2s;}
   .btn:hover{background:var(--teal-bright); transform:translateY(-1px);}
-  .foot-meta{display:flex; justify-content:space-between; align-items:center; margin-top:42px; flex-wrap:wrap; gap:16px; font-family:"JetBrains Mono",monospace; font-size:11.5px; color:#6F8298; letter-spacing:.03em;}
+  .foot-meta{display:flex; justify-content:space-between; align-items:center; margin-top:42px; flex-wrap:wrap; gap:16px; font-family:"JetBrains Mono",monospace; font-size:11.5px; color:#6F8298;}
   .foot-brand{display:flex;align-items:center;gap:11px;color:#fff;} .foot-brand .name{font-family:"Fraunces",serif;font-weight:600;font-size:18px} .foot-brand .name b{color:var(--teal-bright)}
   ::selection{background:rgba(46,220,201,.28);}
 </style>
 </head>
 <body>
 
-<!-- TOP BAR -->
 <div class="topbar"><div class="wrap">
   <div class="brand">
     <svg width="30" height="30" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="9" fill="#0C2548"/><path d="M9 28 L17 17 L23 22 L31 11" stroke="#2EDCC9" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="28" r="3" fill="#fff"/><circle cx="17" cy="17" r="3" fill="#fff"/><circle cx="23" cy="22" r="3" fill="#fff"/><circle cx="31" cy="11" r="3.6" fill="#2EDCC9"/></svg>
@@ -211,309 +174,147 @@
 </div></div>
 
 <nav class="secnav"><div class="inner">
-  <a href="#pain">The pain</a>
-  <a href="#deal">One deal</a>
-  <a href="#lifecycle">The signal timeline</a>
-  <a href="#facts">The facts</a>
-  <a href="#signals">Signal library</a>
-  <a href="#validation">Validation</a>
+  <a href="#claim">The claim</a>
+  <a href="#northport">North Port</a>
+  <a href="#coeur">Coeur d'Alene</a>
+  <a href="#pattern">The pattern</a>
+  <a href="#how">How NationGraph sees it</a>
   <a href="#playbook">What to do</a>
 </div></nav>
 
 <!-- HERO -->
 <header class="hero"><div class="wrap">
   <div class="eyebrow"><span class="dot"></span> Public-Safety Market Brief · License-Plate Readers</div>
-  <h1 class="title">The RFP is the last signal. NationGraph finds the ones <em>before&nbsp;it.</em></h1>
-  <p class="sub">
-    Before a city posts a license-plate-reader bid, the buying motion has usually been visible for months — in <b>council minutes, public-safety agendas, capital budgets, grant approvals, sole-source letters, and vendor-comparison language.</b> Reactive tools start the clock when the RFP posts. <span class="hl">NationGraph reconstructs the trail before the market sees one.</span>
-  </p>
+  <h1 class="title">The RFP is the last signal, <em>not the first.</em></h1>
+  <p class="sub">Bid databases start the clock when the RFP posts. By then the requirements are written, the vendor is often chosen, and the contestable window is closing. <span class="hl">The buying decision was visible for months — just not where anyone was looking.</span></p>
   <div class="meta-row">
-    <span><b>Proof set</b> &nbsp;167 solicitations · 82 agencies · 29 states</span>
-    <span><b>Window</b> &nbsp;Jan 2024 – Jun 2026</span>
-    <span><b>Unit</b> &nbsp;record counts, not dollars</span>
-    <span><b>Scope</b> &nbsp;fire / EMS / police buyers</span>
+    <span><b>Proof set</b> 167 ALPR solicitations · 82 agencies · 29 states</span>
+    <span><b>Window</b> Jan 2024 – Jun 2026</span>
+    <span><b>Method</b> public records, dated &amp; linked</span>
   </div>
 </div></header>
 
 <div class="band"><div class="wrap"><div class="statband3 reveal">
-  <div class="c"><div class="big num"><span data-count="167">0</span></div><div class="lbl">ALPR solicitations — the <b>conservative, visible floor</b></div></div>
-  <div class="c"><div class="big num">~<span data-count="65">0</span>%</div><div class="lbl">Post under a <b>municipal record</b>, not a police one</div></div>
-  <div class="c"><div class="big num">5<span style="font-size:24px"> yrs</span></div><div class="lbl">Of public breadcrumbs before one agency's bid went public <b>(North Port, FL)</b></div></div>
+  <div class="c"><div class="big num"><span data-count="5">0</span> yrs</div><div class="lbl">Of public buying signals before <b>North Port's</b> bid ever posted</div></div>
+  <div class="c"><div class="big num"><span data-count="22">0</span> days</div><div class="lbl">From <b>Coeur d'Alene's</b> council vendor pick to the public bid</div></div>
+  <div class="c"><div class="big num">~<span data-count="65">0</span>%</div><div class="lbl">Of buyers file under a <b>city record</b>, not a police one</div></div>
 </div></div></div>
 
-<!-- THE PAIN -->
-<section id="pain"><div class="wrap narrow reveal">
-  <div class="sec-num">THE PROBLEM</div>
-  <h2>You're prospecting at the <span class="accent">end of the buying motion.</span></h2>
-  <p class="body dek">Most teams find public-safety deals the same way: a bid alert fires, a purchase order shows up, or they work a list of known accounts filtered by "police department." All three are <b>late</b>. By the time an RFP posts, requirements are often written, a favored vendor may already be shaping the spec, and the contestable window is closing.</p>
-  <p class="body" style="margin-top:18px">The opportunity isn't hidden because agencies aren't buying. <b>It's hidden because the buying signal is scattered across the wrong records — before the RFP, under the wrong buyer name.</b> This brief follows the breadcrumbs of one fast-moving category, license-plate readers, to show where the motion actually lives.</p>
+<!-- THE CLAIM -->
+<section id="claim"><div class="wrap narrow reveal">
+  <div class="sec-num">THE CLAIM</div>
+  <h2>By the time you see the bid, <span class="accent">the deal is usually already shaped.</span></h2>
+  <p class="body dek">Every vendor selling to public safety watches the same thing: posted RFPs, purchase orders, spend history. It feels like the front of the funnel. It's the back. A license-plate-reader purchase moves through council discussions, capital budgets, grant awards, vendor demos, and sole-source letters long before a solicitation hits a bid database — and those records are public the whole time.</p>
+  <p class="body" style="margin-top:18px">So we tested it the only honest way: by walking real agencies end to end, from their first public ALPR signal to the day the bid finally appeared. Two of them below — then the pattern behind them.</p>
+  <p class="refrain">The bid isn't the starting gun. It's the eulogy.</p>
 </div></section>
 
-<!-- ONE DEAL -->
-<section id="deal" class="dark"><div class="wrap reveal">
-  <div class="sec-num">ONE DEAL · THE RFP WAS THE LAST STEP</div>
-  <h2>North Port, FL: five years of public breadcrumbs <span class="accent">before the bid databases saw a thing.</span></h2>
-  <p class="dek">Every entry below is a dated, public record already in NationGraph — council workshops, sole-source authorizations, vendor agreements. A bid feed's first sighting of North Port's ALPR program was the <b style="color:#fff">2025 sole-source award notice</b> at the bottom — by which point the deal was effectively closed.</p>
-  <div class="dealcard" style="background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.12); border-left-color:var(--teal-bright)">
-    <div>
-      <div class="nm" style="color:#fff">City of North Port, Florida</div>
-      <div class="f" style="color:#8FA3B8"><b style="color:#fff">Municipality</b> · pop. ~80,000 · buyer of record: <b style="color:#fff">City Commission / Purchasing</b> · end user: North Port PD</div>
-    </div>
-    <div class="tags"><span class="ftag">7 signals before the bid</span></div>
+<!-- NORTH PORT -->
+<section id="northport" class="dark"><div class="wrap reveal">
+  <div class="sec-num">PROOF I · NORTH PORT, FL</div>
+  <h2>Five years of public signals — <span class="accent">and the bid feed saw none of them.</span></h2>
+  <p class="dek">Every entry is a dated public record already in NationGraph. A bid database's first sighting of North Port's ALPR program was the <b style="color:#fff">2025 sole-source award notice</b> at the bottom — by then the vendor was chosen and the deal was closing.</p>
+  <div class="dealcard ondark">
+    <div><div class="nm">City of North Port, Florida</div><div class="f"><b>Municipality</b> · pop. ~80,000 · buyer of record: City Commission / Purchasing · end user: North Port PD</div></div>
+    <div class="tags"><span class="ftag">6 public signals before the bid</span></div>
   </div>
   <div class="timeline">
-    <div class="tl"><div class="top"><span class="d" style="color:#fff">Jun 2020</span><span class="typ">Committee discussion</span></div><div class="ti" style="color:#C2D0E0">Budget workshop — <b style="color:#fff">presentation on automated license-plate readers (ALPR)</b> to the City Commission.</div><a class="src" href="https://cityofnorthport.granicus.com/MinutesViewer.php?view_id=2&clip_id=1865">cityofnorthport.granicus.com →</a></div>
-    <div class="tl"><div class="top"><span class="d" style="color:#fff">Oct 2020</span><span class="typ">Board action</span></div><div class="ti" style="color:#C2D0E0">Commission approves a <b style="color:#fff">sole-source / standardization for the budgeted purchase of Automatic LPRs.</b></div><a class="src" href="https://cityofnorthport.granicus.com/MinutesViewer.php?view_id=2&clip_id=2036">cityofnorthport.granicus.com →</a></div>
-    <div class="tl"><div class="top"><span class="d" style="color:#fff">Jan 2023</span><span class="typ">Vendor agreement</span></div><div class="ti" style="color:#C2D0E0">Commission approves an <b style="color:#fff">MOU with Flock Group, Inc.</b> for LPR data sharing.</div><a class="src" href="https://cityofnorthport.granicus.com/MinutesViewer.php?view_id=2&clip_id=2687">cityofnorthport.granicus.com →</a></div>
-    <div class="tl"><div class="top"><span class="d" style="color:#fff">Apr 2023</span><span class="typ">Vendor agreement</span></div><div class="ti" style="color:#C2D0E0">Commission approves a <b style="color:#fff">contract terms acknowledgement with Vigilant Solutions, LLC.</b></div><a class="src" href="https://cityofnorthport.granicus.com/MinutesViewer.php?view_id=2&clip_id=2751">cityofnorthport.granicus.com →</a></div>
-    <div class="tl"><div class="top"><span class="d" style="color:#fff">Sep 2024</span><span class="typ">Procurement action</span></div><div class="ti" style="color:#C2D0E0">Terms acknowledgement with <b style="color:#fff">Vigilant for a Motorola LPR product</b> — the program standardizes on a vendor.</div><a class="src" href="https://cityofnorthport.granicus.com/MinutesViewer.php?view_id=2&clip_id=3061">cityofnorthport.granicus.com →</a></div>
-    <div class="tl last"><div class="top"><span class="d" style="color:#fff">Aug 2025</span><span class="typ bidfeed">RFP / bid feed</span></div><div class="ti" style="color:#C2D0E0"><b style="color:#fff">"Notice of Intent to Award a Sole/Single-Source Procurement — Motorola Solutions."</b> This is the first moment a bid database would have flagged North Port — a near-closed deal.</div><a class="src" href="https://www.floridabids.net/government-agencies/sarasota/north-port-city-of---purchasing-division-3940/14314870-notice-of-intent-to-award-a-solesingle-source-procurement-motorola-solutions-inc-sole-source.html">floridabids.net →</a></div>
+    <div class="tl"><div class="top"><span class="d">Jun 2020</span><span class="typ">Committee</span></div><div class="ti">Budget workshop — <b>presentation on automated license-plate readers</b> to the City Commission.</div><a class="src" href="https://cityofnorthport.granicus.com/MinutesViewer.php?view_id=2&clip_id=1865">granicus.com →</a></div>
+    <div class="tl"><div class="top"><span class="d">Oct 2020</span><span class="typ">Board action</span></div><div class="ti">Commission approves a <b>sole-source / standardization for the budgeted purchase of Automatic LPRs.</b></div><a class="src" href="https://cityofnorthport.granicus.com/MinutesViewer.php?view_id=2&clip_id=2036">granicus.com →</a></div>
+    <div class="tl"><div class="top"><span class="d">Jan 2023</span><span class="typ">Vendor agreement</span></div><div class="ti">Commission approves an <b>MOU with Flock Group, Inc.</b> for LPR data sharing.</div><a class="src" href="https://cityofnorthport.granicus.com/MinutesViewer.php?view_id=2&clip_id=2687">granicus.com →</a></div>
+    <div class="tl"><div class="top"><span class="d">Apr 2023</span><span class="typ">Vendor agreement</span></div><div class="ti">Commission approves a <b>contract with Vigilant Solutions, LLC.</b></div><a class="src" href="https://cityofnorthport.granicus.com/MinutesViewer.php?view_id=2&clip_id=2751">granicus.com →</a></div>
+    <div class="tl"><div class="top"><span class="d">Sep 2024</span><span class="typ">Procurement</span></div><div class="ti">Terms acknowledgement with <b>Vigilant for a Motorola LPR product</b> — the program standardizes on a vendor.</div><a class="src" href="https://cityofnorthport.granicus.com/MinutesViewer.php?view_id=2&clip_id=3061">granicus.com →</a></div>
+    <div class="tl last"><div class="top"><span class="d">Aug 2025</span><span class="typ bidfeed">← bid feed's first sighting</span></div><div class="ti"><b>"Notice of Intent to Award a Sole/Single-Source Procurement — Motorola Solutions."</b> The deal, not the opportunity.</div><a class="src" href="https://www.floridabids.net/government-agencies/sarasota/north-port-city-of---purchasing-division-3940/14314870-notice-of-intent-to-award-a-solesingle-source-procurement-motorola-solutions-inc-sole-source.html">floridabids.net →</a></div>
   </div>
-  <p class="dek" style="margin-top:26px"><b style="color:#fff">Now multiply that by 82 agencies.</b> The bid was the last visible step — the buying motion lived for years across council, budget, and procurement records. <span style="color:#7E92A8">(Coeur d'Alene, ID is the tight version: a June 2024 council sole-source proclamation for an ALPR trailer, then the public solicitation 22 days later.)</span></p>
 </div></section>
 
-<!-- THE LIFECYCLE -->
-<section id="lifecycle"><div class="wrap reveal">
-  <div class="sec-num">WHERE THE ADVANTAGE LIVES</div>
-  <h2>A public-safety purchase moves through <span class="accent">six stages. Most tools wake up at stage five.</span></h2>
-  <p class="dek">The buying motion is visible long before the bid. NationGraph reads the first four stages; reactive bid and spend databases only see the last two.</p>
+<!-- COEUR D'ALENE -->
+<section id="coeur"><div class="wrap reveal">
+  <div class="sec-num">PROOF II · COEUR D'ALENE, ID</div>
+  <h2>The tight version: <span class="accent">the vendor was picked before the bid existed.</span></h2>
+  <p class="dek">Not every trail is five years. Here the council named the vendor in a public meeting, and the formal solicitation — the part a bid tool would catch — appeared three weeks later, already a sole-source.</p>
+  <div class="timeline">
+    <div class="tl"><div class="top"><span class="d">Jun 18, 2024</span><span class="typ">Council action</span></div><div class="ti">City Council minutes: <b>"sole-source procurement of a speed ALPR trailer from Vigilant."</b> The decision is made, in public.</div><a class="src" href="https://www.cdaid.org/files/Council/Minutes/CouncilMtgMinutes%20061824.pdf">cdaid.org →</a></div>
+    <div class="tl last"><div class="top"><span class="d">Jul 10, 2024</span><span class="typ bidfeed">← bid feed's first sighting · +22 days</span></div><div class="ti"><b>"Purchase of a Speed ALPR Trailer"</b> posts to the bid databases — as a sole-source notice for the vendor already chosen.</div><a class="src" href="https://www.idahobids.com/government-agencies/kootenai/coeur-dalene-city-of-42657/13549665-purchase-of-a-speed-alpr-automatic-license-plate-reader-trailer.html">idahobids.com →</a></div>
+  </div>
+  <p class="refrain">Two agencies, two timelines, one lesson: watching the bid means arriving after the decision.</p>
+</div></section>
+
+<!-- THE PATTERN -->
+<section id="pattern"><div class="wrap reveal">
+  <div class="sec-num">THE PATTERN — NOT TWO ANECDOTES</div>
+  <h2>The buying motion has six stages. <span class="accent">Bid tools wake up at stage five.</span></h2>
+  <p class="dek">North Port and Coeur d'Alene aren't outliers — they're the shape of the category. The decision forms across the first four stages; the RFP and the award are the last two.</p>
   <div class="life">
-    <div class="stage adv"><div class="sn">STAGE 1</div><div class="stt">Need emerges</div><div class="se">Crime trend, chief priority, or council concern.</div></div>
-    <div class="stage adv"><div class="sn">STAGE 2</div><div class="stt">Intent appears</div><div class="se">Meeting agenda, committee discussion, vendor demo, policy debate.</div></div>
-    <div class="stage adv"><div class="sn">STAGE 3</div><div class="stt">Money appears</div><div class="se">Budget line, grant, capital plan, board approval.</div></div>
-    <div class="stage adv"><div class="sn">STAGE 4</div><div class="stt">Procurement forms</div><div class="se">RFI, draft requirements, benchmark language, sole-source letter.</div></div>
+    <div class="stage adv"><div class="sn">STAGE 1</div><div class="stt">Need emerges</div><div class="se">Crime trend, chief priority, council concern.</div></div>
+    <div class="stage adv"><div class="sn">STAGE 2</div><div class="stt">Intent appears</div><div class="se">Agenda, committee discussion, vendor demo.</div></div>
+    <div class="stage adv"><div class="sn">STAGE 3</div><div class="stt">Money appears</div><div class="se">Budget line, grant, board approval.</div></div>
+    <div class="stage adv"><div class="sn">STAGE 4</div><div class="stt">Procurement forms</div><div class="se">Draft specs, benchmark language, sole-source letter.</div></div>
     <div class="stage"><div class="sn">STAGE 5</div><div class="stt">RFP posts</div><div class="se">Bid databases finally see it.</div></div>
     <div class="stage"><div class="sn">STAGE 6</div><div class="stt">Award / PO</div><div class="se">Spend databases finally see it.</div></div>
   </div>
   <div class="life-legend">
-    <span><span class="sw" style="background:linear-gradient(90deg,var(--teal-bright),var(--teal-deep))"></span>NationGraph advantage zone (stages 1–4)</span>
-    <span><span class="sw" style="background:#C7D0DB"></span>Traditional bid / spend tools (stages 5–6)</span>
+    <span><span class="sw" style="background:linear-gradient(90deg,var(--teal-bright),var(--teal-deep))"></span>NationGraph reads stages 1–4</span>
+    <span><span class="sw" style="background:#C7D0DB"></span>Bid / spend tools start at 5–6</span>
   </div>
 
-  <div class="subhead">What vendors usually see vs. what NationGraph sees earlier</div>
-  <div class="tablewrap">
-    <table class="tt">
-      <thead><tr><th>What most tools start with</th><th>What NationGraph sees earlier</th></tr></thead>
+  <p class="body" style="margin-top:34px"><b>"But most bids are open"</b> — true, and worth confronting head-on. Of 167 solicitations, 154 post as open competitive bids and only 13 as explicit sole-source. But <b>open isn't winnable.</b> North Port's "open" program was a sole-source award by the time it surfaced; the 13 are only the cases that say so out loud. And the public record shows how routinely these markets are decided — or re-opened — outside the bid:</p>
+  <div class="tablewrap" style="margin-top:20px">
+    <table>
+      <thead><tr><th>Signal in the public record</th><th>What it says</th><th>Source · date</th><th></th></tr></thead>
       <tbody>
-        <tr><td class="trad">Posted RFP</td><td class="ng"><b>Budget line funding the purchase</b></td></tr>
-        <tr><td class="trad">Purchase order</td><td class="ng"><b>Council approval / board action that created the authority</b></td></tr>
-        <tr><td class="trad">Award notice</td><td class="ng"><b>Committee meeting where the need was discussed</b></td></tr>
-        <tr><td class="trad">Agency name</td><td class="ng"><b>Buyer of record + operational end user</b></td></tr>
-        <tr><td class="trad">Spend history (backward-looking)</td><td class="ng"><b>Forward-looking buying signals</b></td></tr>
-        <tr><td class="trad">Keyword match</td><td class="ng"><b>Contextual intent across meetings, budgets, agendas, and procurement</b></td></tr>
+        <tr><td class="our"><b>Sole-source letter</b></td><td>"No other reasonable alternative source exists"</td><td>Park Ridge, IL · 2025</td><td class="match">deal closing</td></tr>
+        <tr><td class="our"><b>Sole-source justification</b></td><td>"Sole manufacturer of the only LE-grade ALPR"</td><td>Sussex County, VA · Apr 2025</td><td class="match">deal closing</td></tr>
+        <tr><td class="our"><b>Replacement RFP</b></td><td>Re-bid of an existing Flock system, w/ audits</td><td>Richmond, CA · 2026</td><td class="match">re-opening</td></tr>
+        <tr><td class="our"><b>Contract terminations</b></td><td>Cambridge MA, Staunton VA, Santa Clara County CA end Flock</td><td>City/county records · 2025–26</td><td class="match">re-opening</td></tr>
+        <tr><td class="our"><b>State audit</b></td><td>Flock shared ALPR data with CBP, violating state law</td><td>Illinois SOS · Aug 2025</td><td class="match">re-opening</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="note">Honest scope: NationGraph captures these signal <i>types</i>; depth varies by how much an agency publishes. The North Port and Coeur d'Alene trails above are real, dated, and linked — not every agency leaves one this complete, which is exactly why assembling the scattered ones is the advantage.</p>
+  <p class="note">Independent, dated public sources — none used to build the proof set. Every one is a moment a bid feed can't see: the deal closing, or a new one opening.</p>
 </div></section>
 
-<!-- THE DATASET -->
-<section id="facts"><div class="wrap reveal">
-  <div class="sec-num">THE PROOF SET</div>
-  <h2>167 solicitations, 82 agencies, 29 states — <span class="accent">and that's only the visible floor.</span></h2>
-  <p class="dek">We anchor on a clean, conservative proof set: every public-safety ALPR solicitation we could find between January 2024 and June 2026, deduplicated. The real opportunity is broader — many buying motions start as pilots, co-op purchases, grant approvals, budget lines, council votes, renewals, and replacement discussions before they ever become a formal solicitation. Four facts about that floor:</p>
-  <div class="grid-2" style="margin-top:24px; align-items:center">
-    <div class="card pad">
-      <div class="chart-h">ALPR solicitations · by quarter</div>
-      <div class="chart-t">A recurring, deepening pipeline</div>
-      <div class="vbars" id="qbars">
-        <div class="vcol"><div class="vv">6</div><div class="vbar" data-h="21"></div><div class="vl">’24<br>Q1</div></div>
-        <div class="vcol"><div class="vv">10</div><div class="vbar" data-h="34"></div><div class="vl">Q2</div></div>
-        <div class="vcol"><div class="vv">16</div><div class="vbar" data-h="55"></div><div class="vl">Q3</div></div>
-        <div class="vcol"><div class="vv">15</div><div class="vbar" data-h="52"></div><div class="vl">Q4</div></div>
-        <div class="vcol"><div class="vv">15</div><div class="vbar" data-h="52"></div><div class="vl">’25<br>Q1</div></div>
-        <div class="vcol"><div class="vv">12</div><div class="vbar" data-h="41"></div><div class="vl">Q2</div></div>
-        <div class="vcol"><div class="vv">29</div><div class="vbar" data-h="100"></div><div class="vl">Q3</div></div>
-        <div class="vcol"><div class="vv">16</div><div class="vbar" data-h="55"></div><div class="vl">Q4</div></div>
-        <div class="vcol"><div class="vv">28</div><div class="vbar" data-h="97"></div><div class="vl">’26<br>Q1</div></div>
-        <div class="vcol"><div class="vv">20</div><div class="vbar" data-h="69"></div><div class="vl">Q2*</div></div>
-      </div>
-    </div>
-    <div style="padding:4px">
-      <p class="body" style="font-size:15.5px">Steady, substantial demand every quarter across the window. <span style="color:var(--muted)">(*2026 Q2 partial. We don't headline a growth rate — the index skews toward recent filings — only that the pipeline is continuous, not a one-off.)</span></p>
-    </div>
-  </div>
-</div></section>
-
-<!-- FACT 1 -->
-<section><div class="wrap reveal">
-  <div class="sec-num">FACT 1 — THE RFP IS LATE</div>
-  <h2>Buying intent shows up first in <span class="accent">meetings, budgets, grants, and approvals.</span></h2>
-  <p class="dek">Across the set, the earliest public sign of an ALPR purchase is almost never the RFP. It's a council ALPR presentation (North Port, 2020), a sole-source authorization (Coeur d'Alene, 2024), a capital-budget line (Mequon, WI's Flock expansion, 2023), or a federal grant earmarked to "procure LPRs" (Ormond Beach, FL — JAG, 2023). The RFP is where the motion becomes <i>obvious</i> — and crowded.</p>
-  <div class="miss"><div class="h">What a bid alert misses</div><p>An RFP alert tells you the spec exists. It can't tell you the requirements were <b>shaped in a committee meeting months earlier</b> — or that a sole-source letter is already being drafted.</p></div>
-</div></section>
-
-<!-- FACT 2 -->
-<section class="dark"><div class="wrap reveal">
-  <div class="sec-num">FACT 2 — THE BUYER IS HIDDEN</div>
-  <h2>The end user is police. The buyer of record is <span class="accent">the city.</span></h2>
-  <p class="dek">Of 119 named buyers, the purchasing authority sits with a municipal office the majority of the time — buying on behalf of a police department, not as a standalone law-enforcement entity. <b style="color:#fff">~65% post under a municipal record</b>; add county and state procurement offices and most buying authority sits outside a police record entirely.</p>
+<!-- HOW NATIONGRAPH SEES IT -->
+<section id="how" class="dark"><div class="wrap reveal">
+  <div class="sec-num">HOW NATIONGRAPH SEES IT</div>
+  <h2>The signal is scattered across the wrong records — <span class="accent">so we connect them.</span></h2>
+  <p class="dek">The reason no one sees the motion isn't that it's secret. It's that it's fragmented — a budget line here, a council vote there, a grant, a sole-source letter — and filed under the city, not the police department. NationGraph reads those records across every agency and stitches the scattered breadcrumbs into one buying signal, with the buyer of record and the source attached.</p>
   <div class="grid-2" style="margin-top:28px; align-items:start">
     <div class="card pad" style="background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.1)">
-      <div class="chart-h" style="color:#8FA3B8">Composition of public-safety buyers · n = 119 named</div>
-      <div class="chart-t" style="color:#fff">Who actually posts the bid</div>
+      <div class="chart-h" style="color:#8FA3B8">Who actually posts the bid · n = 119 named buyers</div>
+      <div class="chart-t" style="color:#fff">Filed under the city, not the PD</div>
       <div class="bars" id="buyerBars">
         <div class="bar-row"><div class="k" style="color:#E7EFF8">Municipal (city)<small style="color:#7E92A8">NON-POLICE RECORD</small></div><div class="track" style="background:rgba(255,255,255,.08)"><div class="fill" data-w="100"></div></div><div class="v" style="color:#fff">77</div></div>
         <div class="bar-row"><div class="k" style="color:#E7EFF8">County / sheriff</div><div class="track" style="background:rgba(255,255,255,.08)"><div class="fill" data-w="25"></div></div><div class="v" style="color:#fff">19</div></div>
-        <div class="bar-row"><div class="k" style="color:#E7EFF8">State agency<small style="color:#7E92A8">SP / DPS</small></div><div class="track" style="background:rgba(255,255,255,.08)"><div class="fill" data-w="13"></div></div><div class="v" style="color:#fff">10</div></div>
-        <div class="bar-row"><div class="k" style="color:#E7EFF8">Standalone police agency</div><div class="track" style="background:rgba(255,255,255,.08)"><div class="fill" data-w="10"></div></div><div class="v" style="color:#fff">8</div></div>
+        <div class="bar-row"><div class="k" style="color:#E7EFF8">State agency</div><div class="track" style="background:rgba(255,255,255,.08)"><div class="fill" data-w="13"></div></div><div class="v" style="color:#fff">10</div></div>
+        <div class="bar-row"><div class="k" style="color:#E7EFF8">Standalone police</div><div class="track" style="background:rgba(255,255,255,.08)"><div class="fill" data-w="10"></div></div><div class="v" style="color:#fff">8</div></div>
         <div class="bar-row"><div class="k" style="color:#E7EFF8">Federal / other</div><div class="track" style="background:rgba(255,255,255,.08)"><div class="fill" data-w="6"></div></div><div class="v" style="color:#fff">5</div></div>
       </div>
     </div>
     <div style="padding:4px">
-      <div class="pull" style="margin-top:0"><div class="qn" style="color:var(--teal-bright)">~65%</div><div class="qt" style="color:#C2D0E0">post under a <b style="color:#fff">municipal record</b> — the city, not the police department. The example earlier: Burke County, GA's plate-reader RFP was issued by the <b style="color:#fff">Board of Commissioners</b>, not a sheriff.</div></div>
+      <div class="pull" style="margin-top:0"><div class="qn" style="color:var(--teal-bright)">~65%</div><div class="qt" style="color:#C2D0E0">post under a <b style="color:#fff">municipal record</b>, not a police one. Burke County, GA's plate-reader RFP was issued by the <b style="color:#fff">Board of Commissioners</b> — a police-department search never finds it.</div></div>
     </div>
   </div>
-  <div class="miss" style="background:rgba(240,98,60,.08); border-color:rgba(240,98,60,.3)"><div class="h" style="color:#F4A78F">What a police-department search misses</div><p style="color:#C2D0E0">A prospect list filtered to law-enforcement records never sees the bid — it's filed under city procurement or a county board. You miss the buyer entirely, not just the timing.</p></div>
+  <div class="miss ondark"><div class="h">What the other tools miss</div><p>A purchase-order database tells you <b>after</b> the vendor won. A bid alert shows the RFP, not the committee meeting that shaped it. NationGraph flags the moments in between — when a buyer is still budgeting, comparing, replacing, or debating.</p></div>
 </div></section>
 
-<!-- FACT 3 -->
-<section><div class="wrap reveal">
-  <div class="sec-num">FACT 3 — THE DEMAND IS CONTESTABLE</div>
-  <h2>Open competitive bids show vendors can still win — <span class="accent">if they arrive early.</span></h2>
-  <p class="dek">Of 167 solicitations, <b style="color:var(--ink)">154 were open competitive bids; 13 were sole-source.</b> Open competitive means the agency is formally inviting responses — the path isn't closed. One honest caveat, kept short: <b>"open" and "winnable" aren't the same.</b> Some open RFPs are written around an incumbent before they post; we can't see pre-wiring from the public record. What we can say: most visible demand isn't formally locked to a vendor when it appears.</p>
-  <div class="grid-2" style="margin-top:24px; align-items:center">
-    <div class="card pad">
-      <div class="chart-h">Bid type · n = 167</div>
-      <div class="chart-t">154 open vs 13 sole-source</div>
-      <div class="bars">
-        <div class="bar-row"><div class="k">Open competitive</div><div class="track"><div class="fill" data-w="100"></div></div><div class="v">154</div></div>
-        <div class="bar-row"><div class="k">Sole-source<small>near-dead for a challenger</small></div><div class="track"><div class="fill" data-w="8" style="background:linear-gradient(90deg,var(--coral-deep),var(--coral))"></div></div><div class="v">13</div></div>
-      </div>
-    </div>
-    <div style="padding:4px">
-      <div class="pull" style="margin-top:0"><div class="qn">92%</div><div class="qt">of solicitations are open competitive bids — not formally locked to a vendor when they post.</div></div>
-    </div>
-  </div>
-  <div class="miss"><div class="h">What a bid alert misses</div><p>A bid alert shows you the RFP, but not <b>whether the spec was shaped months earlier</b> — the difference between a deal you can win and one you're filling a seat in.</p></div>
-</div></section>
-
-<!-- FACT 4 -->
-<section><div class="wrap narrow reveal">
-  <div class="sec-num">FACT 4 — TIMING DECIDES WINNABILITY</div>
-  <h2>Open <span class="accent">after</span> the RFP is not the same as influence <span class="accent">before</span> it.</h2>
-  <p class="body dek">The single most important sales line in this brief: <b>the challenger's window is open until the sole-source letter gets written.</b> Reach the agency while it's still benchmarking — drafting requirements, comparing vendors, debating in committee — and an open RFP is a real opening. Show up when the RFP posts and you may be reading a decision that was made in stages 2–4. The data point that proves the stakes: North Port's "solicitation" was already a sole-source award notice. The early signals were the only way in.</p>
-</div></section>
-
-<!-- FACT 5 -->
-<section><div class="wrap reveal">
-  <div class="sec-num">FACT 5 — THE LONG TAIL IS SHAPEABLE</div>
-  <h2>The volume is small-town America — <span class="accent">where specs aren't hardened yet.</span></h2>
-  <p class="dek">Among municipal buyers with population on record (n = 48), the median ALPR buyer serves about <b style="color:var(--ink)">53,000</b> people; two-thirds serve under 100,000. Smaller agencies have thinner technical staff and less vendor-evaluation muscle — more room to educate, frame tradeoffs, and shape requirements before they harden.</p>
-  <div class="grid-2" style="margin-top:24px; align-items:center">
-    <div class="card pad">
-      <div class="chart-h">Municipal buyers by population served · n = 48</div>
-      <div class="chart-t">The demand lives under 100k</div>
-      <div class="vbars" id="hist">
-        <div class="vcol"><div class="vv">6</div><div class="vbar" data-h="55"></div><div class="vl">under<br>10k</div></div>
-        <div class="vcol"><div class="vv">7</div><div class="vbar" data-h="64"></div><div class="vl">10–25k</div></div>
-        <div class="vcol"><div class="vv">11</div><div class="vbar" data-h="100"></div><div class="vl">25–50k</div></div>
-        <div class="vcol"><div class="vv">8</div><div class="vbar" data-h="73"></div><div class="vl">50–100k</div></div>
-        <div class="vcol"><div class="vv">7</div><div class="vbar" data-h="64"></div><div class="vl">100–250k</div></div>
-        <div class="vcol hot"><div class="vv">9</div><div class="vbar" data-h="82"></div><div class="vl">250k+</div></div>
-      </div>
-    </div>
-    <div style="padding:4px">
-      <div class="pull" style="margin-top:0"><div class="qn">53k</div><div class="qt">median municipal buyer. Bids came from towns as small as Havelock, IA (124) and Dunnellon, FL (2,005).</div></div>
-      <div class="miss"><div class="h">What a spend-history search misses</div><p>Backward-looking spend overweights big incumbents and <b>misses smaller agencies before their first major purchase.</b></p></div>
-    </div>
-  </div>
-</div></section>
-
-<!-- THE MAP -->
-<section><div class="wrap reveal">
-  <div class="sec-num">THE MAP</div>
-  <h2>29 states, all four regions — <span class="accent">breadth, not a few big departments.</span></h2>
-  <p class="dek">Where the proof-set solicitations resolve geographically. Hover any state for its count.</p>
-  <div class="mapwrap" style="margin-top:24px">
-    <div id="usmap" role="img" aria-label="US map of ALPR solicitations by state. Leaders: California 14, North Carolina 12, Florida 11, New York 10, Texas 10."></div>
-    <div class="maptip" id="maptip"></div>
-    <div class="maplegend">
-      <span>Solicitations:</span>
-      <span><span class="sw" style="background:#E8ECF2"></span>0</span>
-      <span><span class="sw" style="background:#9FE6DD"></span>1</span>
-      <span><span class="sw" style="background:#2BC0B0"></span>2–4</span>
-      <span><span class="sw" style="background:#12A293"></span>5–9</span>
-      <span><span class="sw" style="background:#0A7E72"></span>10+</span>
-      <span style="margin-left:auto;color:var(--faint)">South 53 · West 24 · Northeast 24 · Midwest 18</span>
-    </div>
-  </div>
-</div></section>
-
-<!-- SIGNAL LIBRARY -->
-<section id="signals"><div class="wrap reveal">
-  <div class="sec-num">THE NATIONGRAPH SIGNAL LIBRARY</div>
-  <h2>How NationGraph reads a market.</h2>
-  <p class="dek">Each of these is a public breadcrumb that moves an account up the buying curve — the raw material a bid feed never indexes.</p>
-  <div class="tablewrap" style="margin-top:24px">
-    <table class="sig">
-      <thead><tr><th>Signal</th><th>Why it matters</th></tr></thead>
-      <tbody>
-        <tr><td class="sg">"Comparable to Flock" in a spec</td><td>Buyer knows the category but may be open to alternatives</td></tr>
-        <tr><td class="sg">Capital-budget line for LPR cameras</td><td>The money exists before the RFP</td></tr>
-        <tr><td class="sg">Council study session on ALPR</td><td>Requirements and concerns are still being shaped</td></tr>
-        <tr><td class="sg">Sole-source letter</td><td>The deal may already be closing — move or skip</td></tr>
-        <tr><td class="sg">Contract termination</td><td>A replacement opportunity just opened</td></tr>
-        <tr><td class="sg">New police chief or sheriff</td><td>New priorities and a fresh technology agenda</td></tr>
-        <tr><td class="sg">Grant award for public-safety tech</td><td>A funding source that may trigger procurement</td></tr>
-        <tr><td class="sg">Board approval for camera expansion</td><td>Procurement usually follows</td></tr>
-      </tbody>
-    </table>
-  </div>
-</div></section>
-
-<!-- VALIDATION -->
-<section id="validation"><div class="wrap reveal">
-  <div class="sec-num">VALIDATION — A MARKET CAN CLOSE FAST</div>
-  <h2>The timing argument, confirmed by the public record.</h2>
-  <p class="dek">Independent, dated sources we did <b>not</b> use to build the dataset show the same lesson: a market closes when an incumbent shapes the spec or a sole-source letter gets written — and reopens when a contract is terminated or re-bid. That cadence is exactly what the breadcrumbs track.</p>
-  <div class="tablewrap" style="margin-top:24px">
-    <table class="valid">
-      <thead><tr><th>Signal NationGraph tracks</th><th>Public confirmation (independent)</th><th>Source · date</th><th>Match</th></tr></thead>
-      <tbody>
-        <tr><td class="our"><b>Sole-source letter = deal closing</b></td><td>"No other reasonable alternative source exists"</td><td>Park Ridge, IL · 2025</td><td class="match">✓</td></tr>
-        <tr><td class="our"><b>Sole-source justification by name</b></td><td>"Sole manufacturer of the only LE-grade ALPR"</td><td>Sussex County, VA · Apr 2025</td><td class="match">✓</td></tr>
-        <tr><td class="our"><b>"Comparable to Flock" = benchmarking</b></td><td>Replacement RFP w/ third-party audits</td><td>Richmond, CA · 2026</td><td class="match">✓</td></tr>
-        <tr><td class="our"><b>Termination = replacement opening</b></td><td>Cambridge MA, Staunton VA, Santa Clara County CA end Flock</td><td>City statements + county vote · 2025–26</td><td class="match">✓</td></tr>
-        <tr><td class="our"><b>Scrutiny reopens a market</b></td><td>State audit: Flock shared ALPR data with CBP, violating law</td><td>Illinois SOS · Aug 2025</td><td class="match">✓</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="miss"><div class="h">What a purchase-order database misses</div><p>A PO database tells you <b>after</b> Flock won. NationGraph flags the moments when a buyer is still comparing, replacing, budgeting, or debating — when you can still act.</p></div>
-  <p class="note">Sources: BidNet Direct; sussexcountyva.gov; richmondside.org; cambridgema.gov; ci.staunton.va.us; Press Democrat; Illinois SOS / NPR Illinois. All dated, public, and independent of the NationGraph dataset.</p>
-</div></section>
-
-<!-- FROM SIGNAL TO ACTION -->
-<section class="dark"><div class="wrap reveal">
-  <div class="sec-num">FROM SIGNAL TO ACTION</div>
-  <h2>How a breadcrumb becomes a sales play.</h2>
-  <div class="flow">
-    <div class="flowstep"><div class="n">01 · DETECT</div><h4>Detect</h4><p>A city council discusses camera expansion or an ALPR pilot.</p></div>
-    <div class="flowstep"><div class="n">02 · CONNECT</div><h4>Connect</h4><p>Match it to the PD, the procurement office, the budget authority, and existing vendors.</p></div>
-    <div class="flowstep"><div class="n">03 · CLASSIFY</div><h4>Classify</h4><p>New purchase, replacement, renewal, pilot, or sole-source risk?</p></div>
-    <div class="flowstep"><div class="n">04 · PRIORITIZE</div><h4>Prioritize</h4><p>Score urgency by funding, timing, decision-maker activity, and procurement language.</p></div>
-    <div class="flowstep"><div class="n">05 · PUSH</div><h4>Push</h4><p>Alert with the account, contact path, source records, and the recommended next move.</p></div>
-  </div>
-</div></section>
-
-<!-- WHAT VENDORS SHOULD DO -->
+<!-- WHAT TO DO -->
 <section id="playbook"><div class="wrap reveal">
-  <div class="sec-num">WHAT THIS MEANS FOR VENDORS</div>
-  <h2>Stop waiting for the RFP alert.</h2>
-  <div class="tk-grid" style="margin-top:28px">
-    <div class="tk" style="background:#fff; border-color:var(--line)"><div class="n" style="color:var(--teal-deep)">01</div><h3 style="color:var(--ink)">Prospect by procurement authority</h3><p style="color:var(--muted)">Map the buyer of record (city / county / finance / board), not just the police department. That alone recovers the market you can't currently see.</p></div>
-    <div class="tk" style="background:#fff; border-color:var(--line)"><div class="n" style="color:var(--teal-deep)">02</div><h3 style="color:var(--ink)">Monitor pre-RFP signals</h3><p style="color:var(--muted)">Watch council, committee, budget, and grant records — the stages where requirements are still being defined.</p></div>
-    <div class="tk" style="background:#fff; border-color:var(--line)"><div class="n" style="color:var(--teal-deep)">03</div><h3 style="color:var(--ink)">Arrive before the spec hardens</h3><p style="color:var(--muted)">Prioritize open, vendor-neutral demand and "comparable-to" specs — and reach the agency while it's still benchmarking.</p></div>
-    <div class="tk" style="background:#fff; border-color:var(--line)"><div class="n" style="color:var(--teal-deep)">04</div><h3 style="color:var(--ink)">Treat ALPR as a modernization tripwire</h3><p style="color:var(--muted)">A plate-reader signal often rides with RTCC software, camera networks, evidence management, CAD/RMS, body cameras, and drones.</p></div>
+  <div class="sec-num">WHAT TO DO ABOUT IT</div>
+  <h2>Get upstream of the sole-source letter.</h2>
+  <div class="tk-grid" style="margin-top:26px">
+    <div class="tk"><div class="n">01</div><h3>Prospect by procurement authority</h3><p>Map the buyer of record — city, county, finance, board — not just the police department. ~65% of the market is filed where department searches never look.</p></div>
+    <div class="tk"><div class="n">02</div><h3>Watch stages 1–4, not stage 5</h3><p>Council agendas, budget lines, grant awards, and committee discussions are where requirements are still open. The RFP is confirmation, not opportunity.</p></div>
+    <div class="tk"><div class="n">03</div><h3>Arrive before the spec hardens</h3><p>The challenger's window is open until the sole-source letter gets written. Reach the agency while it's still benchmarking — that's when "open" is actually winnable.</p></div>
+    <div class="tk"><div class="n">04</div><h3>Treat ALPR as a tripwire</h3><p>A plate-reader signal usually rides with broader modernization — RTCC, camera networks, evidence management, CAD/RMS, body cameras, drones.</p></div>
   </div>
 </div></section>
 
-<!-- CTA -->
 <footer><div class="wrap">
   <div class="cta reveal">
-    <div class="big">NationGraph doesn't just find opportunities. <span class="accent">It reconstructs the buying motion before the opportunity is obvious.</span></div>
+    <div class="big">Stop watching the bids. <span class="accent">Watch the buying motion.</span></div>
     <div class="row">
-      <p>Send us one target product category — or one current customer. We'll show you lookalike agencies already discussing, budgeting, approving, replacing, or piloting public-safety technology, before the formal RFP appears.</p>
+      <p>Send us one product category — or one current customer. We'll show you lookalike agencies already budgeting, approving, replacing, or piloting public-safety technology, before the formal RFP appears.</p>
       <a class="btn" href="https://nationgraph.com">Give us your category →</a>
     </div>
   </div>
@@ -522,15 +323,13 @@
       <svg width="26" height="26" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="9" fill="#0C2548"/><path d="M9 28 L17 17 L23 22 L31 11" stroke="#2EDCC9" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="28" r="3" fill="#fff"/><circle cx="17" cy="17" r="3" fill="#fff"/><circle cx="23" cy="22" r="3" fill="#fff"/><circle cx="31" cy="11" r="3.6" fill="#2EDCC9"/></svg>
       <span class="name">Nation<b>Graph</b></span>
     </div>
-    <div>PUBLIC-SAFETY MARKET BRIEF · LICENSE-PLATE READERS · COUNTS NOT DOLLARS · SOLICITATIONS ARE THE FLOOR · © 2026 NATIONGRAPH</div>
+    <div>PROOF SET: 167 SOLICITATIONS · 82 AGENCIES · 29 STATES · COUNTS NOT DOLLARS · © 2026 NATIONGRAPH</div>
   </div>
 </div></footer>
 
-<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
 <script>
 function animateCount(el){
-  const target=+el.dataset.count, dur=1300, t0=performance.now();
+  const target=+el.dataset.count, dur=1200, t0=performance.now();
   function step(t){ const p=Math.min(1,(t-t0)/dur); const e=1-Math.pow(1-p,3); el.textContent=Math.round(e*target); if(p<1) requestAnimationFrame(step); }
   requestAnimationFrame(step);
 }
@@ -539,31 +338,10 @@ const io=new IntersectionObserver((ents)=>{
     const el=e.target; el.classList.add('in');
     el.querySelectorAll('[data-count]').forEach(animateCount);
     el.querySelectorAll('.fill[data-w]').forEach(f=>{ f.style.width=f.dataset.w+'%'; });
-    el.querySelectorAll('.vbar[data-h]').forEach(b=>{ b.style.height=b.dataset.h+'%'; });
     io.unobserve(el);
   });
-},{threshold:.14});
+},{threshold:.15});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-// interactive US map (public-domain us-atlas via d3)
-(function(){
-  const host=document.getElementById('usmap');
-  if(!host || typeof d3==='undefined' || typeof topojson==='undefined'){ return; }
-  const COUNTS={"California":14,"North Carolina":12,"Florida":11,"New York":10,"Texas":10,"Pennsylvania":8,"Ohio":7,"Colorado":5,"Maryland":5,"Georgia":4,"Iowa":4,"District of Columbia":3,"Mississippi":3,"Oregon":3,"Massachusetts":2,"Nebraska":2,"New Jersey":2,"South Carolina":2,"Wisconsin":2,"Alabama":1,"Connecticut":1,"Idaho":1,"Illinois":1,"Maine":1,"Michigan":1,"Minnesota":1,"Tennessee":1,"Utah":1,"Virginia":1};
-  function col(n){ if(!n) return '#E8ECF2'; if(n>=10) return '#0A7E72'; if(n>=5) return '#12A293'; if(n>=2) return '#2BC0B0'; return '#9FE6DD'; }
-  const w=975,h=610, tip=document.getElementById('maptip');
-  const svg=d3.select(host).append('svg').attr('viewBox','0 0 '+w+' '+h).attr('preserveAspectRatio','xMidYMid meet');
-  d3.json('https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json').then(function(us){
-    const fc=topojson.feature(us, us.objects.states);
-    const path=d3.geoPath(d3.geoAlbersUsa().fitSize([w,h], fc));
-    svg.append('g').selectAll('path').data(fc.features).join('path')
-      .attr('class','st2').attr('d',path)
-      .attr('fill',function(d){ return col(COUNTS[d.properties.name]||0); })
-      .attr('stroke','#fff').attr('stroke-width',0.8)
-      .on('mousemove',function(ev,d){ const n=COUNTS[d.properties.name]||0; tip.innerHTML=d.properties.name+' — <b>'+n+'</b> solicitation'+(n===1?'':'s'); tip.style.opacity=1; const r=host.getBoundingClientRect(); tip.style.left=(ev.clientX-r.left)+'px'; tip.style.top=(ev.clientY-r.top)+'px'; })
-      .on('mouseleave',function(){ tip.style.opacity=0; });
-  }).catch(function(){ host.innerHTML='<p class="note" style="padding:18px 4px">Live map unavailable.</p>'; });
-})();
 </script>
 </body>
 </html>
