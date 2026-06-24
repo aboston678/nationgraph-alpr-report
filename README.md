@@ -1,23 +1,18 @@
-# The Plate-Reader Market Is Bigger — and More Winnable — Than Your Pipeline Thinks
+# The RFP Is the Last Signal — NationGraph Public-Safety Market Brief
 
-A single-page, NationGraph-branded public-safety market brief. **One claim, backed by three facts.**
+A single-page, NationGraph-branded data report on license-plate readers. **Positioning:** NationGraph reconstructs the *buying motion before the RFP* — council minutes, capital budgets, grants, sole-source letters — vs. reactive bid/spend tools that start when the RFP posts.
 
-## The claim
-Most of the police license-plate-reader market is bid out **in the open**, to buyers most vendors **never see** — so the opening isn't beating the leader head-on, it's reaching the hidden, contestable majority first.
+## Thesis
+"The RFP is the last signal. NationGraph finds the ones before it." By the time an ALPR bid posts, the buying motion has usually been visible for months in non-bid public records.
 
-*Not claiming:* that Flock is losing or the category is wide open. Flock has a real moat, and many of its wins close before an RFP appears, so this RFP-based view undercounts the leader. The claim is narrower: alongside those quiet wins sits a large, named, contestable slice — and most teams never see it.
+## Structure
+Hero → the pain → **one deal timeline (North Port, FL — 5 yrs of dated breadcrumbs before the bid feed saw it)** → six-stage buying-signal lifecycle + NationGraph-vs-tools table → proof set (167/82/29) → Fact 1 (RFP is late) · Fact 2 (buyer is hidden, ~65% municipal) · Fact 3 (demand contestable, 154/13) · Fact 4 (timing decides winnability) · Fact 5 (long tail, median 53k) → US map → Signal Library → Validation (timing, independent sources) → signal-to-action workflow → vendor playbook → CTA.
 
-## The three facts
-- **WHO (~90%)** — buyers hide under the wrong label: 9 in 10 buy through city/county procurement, not a "police agency" record. (n=119 named)
-- **WHERE (53k)** — the demand is small-town America: median municipal buyer ~53,000; two-thirds under 100k. (n=48 w/ population)
-- **HOW (154/167)** — it's bid out in the open: 154 of 167 are open competitive bids, 89% name no vendor — the spec is still shapeable.
-
-## Anatomy of a deal (worked example)
-Cincinnati, OH walked end-to-end: 2022 Vigilant LPR term-contract RFP → 2023 mobile-LPR RFP → FY2026–27 Approved Capital Budget line ($300K, "Police Fixed License Plate Reader Cameras") → on-file Chief (Theetge). Every record sits under the City (Municipality), none under a "police agency" — the blindspot in motion.
-
-## Scope & guardrails
-- 167 solicitations · 82 agencies · 29 states · Jan 2024 – Jun 2026.
-- **Counts, not dollars. Intent, not awards. Visible (RFP) demand only.** Every figure is a floor (deduped; ~48 unresolved records excluded).
+## Honesty guardrails (load-bearing)
+- **North Port, not Cincinnati**, is the pre-RFP example. Cincinnati's $300K LPR budget line is dated 2025-07-01 — *after* its RFPs — so it cannot illustrate "budget before RFP." Removed.
+- **~65%** (municipal record), not ~90% — sheriffs and state police are law-enforcement records.
+- **No "average X months early" headline** — the data supports the signal *types* and named real trails (North Port, Coeur d'Alene), not a market-wide lead-time average.
+- Counts not dollars; solicitations are the conservative floor; every breadcrumb links to a real dated source.
 
 ## Stack
-Static single-file site (`index.html`), no build step. Deployed on Vercel → nationgraph-alpr-report.vercel.app.
+Static `index.html`, no build. Interactive US map via d3 + public-domain us-atlas. Deployed on Vercel → nationgraph-alpr-report.vercel.app.
