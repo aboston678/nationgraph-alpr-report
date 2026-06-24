@@ -1,18 +1,20 @@
-# The Plate-Reader Market Is Bigger Than Your Pipeline Thinks — NationGraph Public-Safety Market Brief
+# The Plate-Reader Market Is Bigger — and More Winnable — Than Your Pipeline Thinks
 
-A single-page, NationGraph-branded data report. Thesis: **the police plate-reader category has a dominant incumbent (Flock Safety), but a large, named, contestable slice of demand is structurally invisible to how most teams prospect.** Automated license-plate readers are the proof case.
+A single-page, NationGraph-branded public-safety market brief. **One claim, backed by three facts.**
 
-## Key figures (Jan 2024 – Jun 2026)
-- **167** unique plate-reader solicitations (deduplicated) from **82** agencies across **29** states
-- **~90%** of buyers are filed under city/county procurement, not a "police agency" record
-- **154 of 167** are open competitive bids; 13 sole-source (single-digit share every year — reported as a fact, not a trend)
-- Buyer composition (n=119): municipal PD 77 · county/sheriff 19 · state LE 10 · standalone police agency 8 · federal/other 5
-- Buyer size (n=48 municipal w/ population): median ~53,000; two-thirds under 100k
-- Vendor named (n=167): 149 neutral · Flock 11 · Motorola/Vigilant 3 · Rekor 3 · Genetec 1
+## The claim
+Most of the police license-plate-reader market is bid out **in the open**, to buyers most vendors **never see** — so the opening isn't beating the leader head-on, it's reaching the hidden, contestable majority first.
 
-## Honesty guardrails
-- **Counts, not dollars.** **Intent, not awards.** Every figure is a **floor** (deduped; ~48 unresolved records excluded).
-- **Visible demand only** — deals the incumbent closes pre-RFP (pilots, cooperative contracts) fall outside the dataset, so this is a floor on *contestable* demand, not market share.
+*Not claiming:* that Flock is losing or the category is wide open. Flock has a real moat, and many of its wins close before an RFP appears, so this RFP-based view undercounts the leader. The claim is narrower: alongside those quiet wins sits a large, named, contestable slice — and most teams never see it.
+
+## The three facts
+- **WHO (~90%)** — buyers hide under the wrong label: 9 in 10 buy through city/county procurement, not a "police agency" record. (n=119 named)
+- **WHERE (53k)** — the demand is small-town America: median municipal buyer ~53,000; two-thirds under 100k. (n=48 w/ population)
+- **HOW (154/167)** — it's bid out in the open: 154 of 167 are open competitive bids, 89% name no vendor — the spec is still shapeable.
+
+## Scope & guardrails
+- 167 solicitations · 82 agencies · 29 states · Jan 2024 – Jun 2026.
+- **Counts, not dollars. Intent, not awards. Visible (RFP) demand only.** Every figure is a floor (deduped; ~48 unresolved records excluded).
 
 ## Stack
-Static single-file site (`index.html`), no build step. Deployed on Vercel.
+Static single-file site (`index.html`), no build step. Deployed on Vercel → nationgraph-alpr-report.vercel.app.
