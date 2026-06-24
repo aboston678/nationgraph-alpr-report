@@ -151,6 +151,15 @@
 
   .note{font-family:"JetBrains Mono",monospace; font-size:11.5px; color:var(--faint); margin-top:16px; line-height:1.6;}
 
+  /* verdict band */
+  .vband{background:linear-gradient(118deg,#0A1E3C 0%, #0A7E72 100%); padding:70px 0; color:#fff;}
+  .vband .vh{font-family:"Fraunces",serif; font-weight:600; font-size:clamp(30px,5vw,48px); letter-spacing:-.02em; line-height:1.06;}
+  .vband .vh .u{text-decoration:underline; text-decoration-color:var(--teal-bright); text-decoration-thickness:3px; text-underline-offset:6px;}
+  .vband p{font-family:"JetBrains Mono",monospace; font-size:14px; line-height:1.75; color:rgba(255,255,255,.88); max-width:94ch; margin:22px 0 0;}
+  .vband p b{color:#fff;}
+  .foot-about p{color:#9FB1C5; font-size:14px; max-width:80ch; line-height:1.62; margin:0;}
+  .foot-about a{color:var(--teal-bright);}
+
   footer{background:var(--navy-950); color:#9FB1C5; padding:60px 0 46px;}
   .cta{background:linear-gradient(115deg,var(--navy-800),#0c3057); border:1px solid rgba(46,220,201,.24); border-radius:22px; padding:44px; box-shadow:var(--shadow);}
   .cta .big{font-family:"Fraunces",serif; font-weight:600; color:#fff; font-size:clamp(24px,3vw,32px); line-height:1.18; max-width:24ch;} .cta .big .accent{color:var(--teal-bright);}
@@ -178,8 +187,9 @@
   <a href="#northport">North Port</a>
   <a href="#coeur">Coeur d'Alene</a>
   <a href="#pattern">The pattern</a>
-  <a href="#how">How NationGraph sees it</a>
-  <a href="#playbook">What to do</a>
+  <a href="#how">Where the signal lives</a>
+  <a href="#playbook">Implications</a>
+  <a href="#verdict">Verdict</a>
 </div></nav>
 
 <!-- HERO -->
@@ -276,9 +286,9 @@
 
 <!-- HOW NATIONGRAPH SEES IT -->
 <section id="how" class="dark"><div class="wrap reveal">
-  <div class="sec-num">HOW NATIONGRAPH SEES IT</div>
-  <h2>The signal is scattered across the wrong records — <span class="accent">so we connect them.</span></h2>
-  <p class="dek">The reason no one sees the motion isn't that it's secret. It's that it's fragmented — a budget line here, a council vote there, a grant, a sole-source letter — and filed under the city, not the police department. NationGraph reads those records across every agency and stitches the scattered breadcrumbs into one buying signal, with the buyer of record and the source attached.</p>
+  <div class="sec-num">WHERE THE SIGNAL LIVES</div>
+  <h2>The decision is on the public record — <span class="accent">just not under "police."</span></h2>
+  <p class="dek">The buying motion isn't hidden; it's fragmented. The records that reveal it — capital budgets, council and committee votes, grant awards, sole-source letters — sit with city, county, and finance offices, not police departments. Of 119 named buyers in the proof set, roughly 65% post under a municipal record.</p>
   <div class="grid-2" style="margin-top:28px; align-items:start">
     <div class="card pad" style="background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.1)">
       <div class="chart-h" style="color:#8FA3B8">Who actually posts the bid · n = 119 named buyers</div>
@@ -295,28 +305,31 @@
       <div class="pull" style="margin-top:0"><div class="qn" style="color:var(--teal-bright)">~65%</div><div class="qt" style="color:#C2D0E0">post under a <b style="color:#fff">municipal record</b>, not a police one. Burke County, GA's plate-reader RFP was issued by the <b style="color:#fff">Board of Commissioners</b> — a police-department search never finds it.</div></div>
     </div>
   </div>
-  <div class="miss ondark"><div class="h">What the other tools miss</div><p>A purchase-order database tells you <b>after</b> the vendor won. A bid alert shows the RFP, not the committee meeting that shaped it. NationGraph flags the moments in between — when a buyer is still budgeting, comparing, replacing, or debating.</p></div>
+  <p class="dek" style="margin-top:26px; max-width:80ch">Across the proof set, a single ALPR purchase typically appears in three to five different record types — budget, committee minutes, grant, contract — across multiple years before any solicitation posts. No bid portal or spend feed indexes that trail; reconstructing it means reading the records the decision actually moves through.</p>
 </div></section>
 
 <!-- WHAT TO DO -->
 <section id="playbook"><div class="wrap reveal">
-  <div class="sec-num">WHAT TO DO ABOUT IT</div>
-  <h2>Get upstream of the sole-source letter.</h2>
+  <div class="sec-num">WHAT THE PATTERN IMPLIES</div>
+  <h2>Reading the market by RFP <span class="accent">understates it — and arrives late.</span></h2>
   <div class="tk-grid" style="margin-top:26px">
-    <div class="tk"><div class="n">01</div><h3>Prospect by procurement authority</h3><p>Map the buyer of record — city, county, finance, board — not just the police department. ~65% of the market is filed where department searches never look.</p></div>
-    <div class="tk"><div class="n">02</div><h3>Watch stages 1–4, not stage 5</h3><p>Council agendas, budget lines, grant awards, and committee discussions are where requirements are still open. The RFP is confirmation, not opportunity.</p></div>
-    <div class="tk"><div class="n">03</div><h3>Arrive before the spec hardens</h3><p>The challenger's window is open until the sole-source letter gets written. Reach the agency while it's still benchmarking — that's when "open" is actually winnable.</p></div>
-    <div class="tk"><div class="n">04</div><h3>Treat ALPR as a tripwire</h3><p>A plate-reader signal usually rides with broader modernization — RTCC, camera networks, evidence management, CAD/RMS, body cameras, drones.</p></div>
+    <div class="tk"><div class="n">01</div><h3>The market is larger than bid feeds show</h3><p>With ~65% of buyers filing under municipal rather than police records, a police-department or bid-portal view systematically undercounts the active buyer pool.</p></div>
+    <div class="tk"><div class="n">02</div><h3>Requirements are set before the solicitation</h3><p>Stages 1–4 — budget, committee, benchmark language, sole-source justification — fix the specification. A posted RFP records a decision that is largely already made.</p></div>
+    <div class="tk"><div class="n">03</div><h3>"Open" overstates contestability</h3><p>154 of 167 bids are open competitive, but openness is a legal posture, not proof a deal is winnable — as North Port's open program turned sole-source illustrates.</p></div>
+    <div class="tk"><div class="n">04</div><h3>ALPR rarely moves alone</h3><p>Plate-reader activity correlates with broader public-safety modernization — RTCC software, camera networks, evidence management, CAD/RMS, body cameras, and drones.</p></div>
   </div>
 </div></section>
 
+<!-- VERDICT -->
+<section id="verdict" class="vband"><div class="wrap reveal">
+  <div class="vh">Verdict · <span class="u">the RFP is the last signal.</span></div>
+  <p>In the public-safety license-plate-reader market, the buying decision forms upstream — in budgets, council votes, grants, and sole-source letters — and is frequently settled before a solicitation reaches a bid portal. North Port's bid surfaced as a sole-source award after five years of public signals; Coeur d'Alene's vendor was named three weeks before its bid posted. The RFP documents the decision; it does not open it.</p>
+  <p>That is not the same as saying every deal is closed. 154 of 167 solicitations post as open, competitive bids — but "open" is a posture, not a guarantee, and the contestable window narrows as the specification hardens across stages one through four. The signal that decides the outcome is the one before the RFP, and it sits in records most market tools never read.</p>
+</div></section>
+
 <footer><div class="wrap">
-  <div class="cta reveal">
-    <div class="big">Stop watching the bids. <span class="accent">Watch the buying motion.</span></div>
-    <div class="row">
-      <p>Send us one product category — or one current customer. We'll show you lookalike agencies already budgeting, approving, replacing, or piloting public-safety technology, before the formal RFP appears.</p>
-      <a class="btn" href="https://nationgraph.com">Give us your category →</a>
-    </div>
+  <div class="foot-about reveal" style="margin-bottom:30px">
+    <p>This brief draws on NationGraph's index of public-sector records — solicitations, capital budgets, council and committee minutes, grants, and contracts — for fire, EMS, and police buyers, January 2024 – June 2026. Counts, not dollars; the 167 solicitations are a conservative floor. Every breadcrumb cited links to a primary public source. For the methodology behind this brief, or a category-specific cut, visit <a href="https://nationgraph.com">nationgraph.com</a>.</p>
   </div>
   <div class="foot-meta">
     <div class="foot-brand">
