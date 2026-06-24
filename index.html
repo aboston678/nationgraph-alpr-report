@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>The Plate-Reader Market Is Bigger — and More Winnable — Than Your Pipeline Thinks | NationGraph</title>
-<meta name="description" content="One claim, three facts. Most of the police license-plate-reader market is bid out in the open, to buyers most vendors never see. 167 solicitations, 82 agencies, 29 states." />
-<meta property="og:title" content="The Plate-Reader Market Is Bigger — and More Winnable — Than Your Pipeline Thinks" />
-<meta property="og:description" content="A NationGraph public-safety market brief. One claim backed by three facts: who the buyers are, where they are, and how the demand is bid." />
+<title>Your ALPR Pipeline Is Hiding From You | NationGraph</title>
+<meta name="description" content="You can see maybe 1 in 10 of the ALPR deals in your market. The other 9 are real, public, and posted — just not where your filters look. 167 solicitations, 82 agencies, 29 states." />
+<meta property="og:title" content="Your ALPR Pipeline Is Hiding From You" />
+<meta property="og:description" content="A NationGraph public-safety market brief. ~90% of ALPR buyers aren't filed under a 'police agency' record. It's not a market-size problem — it's a lookup problem." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,29 +17,22 @@
     --paper:#F7F8FB; --card:#FFFFFF; --line:#E8ECF2; --line-2:#D7DFEA;
     --teal:#10B6A5; --teal-bright:#2EDCC9; --teal-deep:#0A7E72; --teal-ghost:rgba(16,182,165,.12);
     --coral:#F0623C; --coral-deep:#C9482A;
-    --gold:#E9B949;
     --shadow:0 1px 2px rgba(8,22,46,.04), 0 10px 34px rgba(8,22,46,.07);
     --shadow-lg:0 30px 70px rgba(8,22,46,.14);
     --r:18px;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
-  body{margin:0; background:var(--paper); color:var(--ink);
-    font-family:"Inter",system-ui,-apple-system,sans-serif; font-size:17.5px; line-height:1.68; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
-  .serif{font-family:"Fraunces","Georgia",serif;}
-  .mono{font-family:"JetBrains Mono",ui-monospace,monospace;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:"Inter",system-ui,-apple-system,sans-serif; font-size:17.5px; line-height:1.68; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
   .num{font-variant-numeric:tabular-nums; letter-spacing:-.01em;}
   h1,h2,h3{margin:0; font-family:"Fraunces",serif; font-weight:600; line-height:1.06; letter-spacing:-.015em;}
   .wrap{max-width:1120px; margin:0 auto; padding:0 32px;}
   .narrow{max-width:820px;}
   a{color:var(--teal-deep); text-decoration:none;}
   .eyebrow{font-family:"JetBrains Mono",monospace; text-transform:uppercase; letter-spacing:.16em; font-size:12px; font-weight:600;}
-
-  /* reveal */
   .reveal{opacity:0; transform:translateY(22px); transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);}
   .reveal.in{opacity:1; transform:none;}
 
-  /* ---- top bar ---- */
   .topbar{position:sticky; top:0; z-index:60; background:rgba(5,15,34,.78); backdrop-filter:blur(14px); border-bottom:1px solid rgba(255,255,255,.07);}
   .topbar .wrap{display:flex; align-items:center; justify-content:space-between; height:62px;}
   .brand{display:flex; align-items:center; gap:11px;}
@@ -48,65 +41,48 @@
   .topbar .tag{font-family:"JetBrains Mono",monospace; color:#94A6BA; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase;}
   @media(max-width:680px){.topbar .tag{display:none}}
 
-  /* ---- hero ---- */
   .hero{position:relative; background:radial-gradient(1100px 600px at 82% -10%, rgba(46,220,201,.20), transparent 58%), radial-gradient(900px 500px at 5% 110%, rgba(16,182,165,.10), transparent 60%), linear-gradient(180deg,var(--navy-950),var(--navy-850)); color:#EAF1F8; padding:84px 0 96px; overflow:hidden;}
   .hero:before{content:""; position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px); background-size:52px 52px; mask-image:radial-gradient(800px 460px at 72% 8%,#000,transparent 72%); pointer-events:none;}
   .hero .wrap{position:relative; z-index:1;}
   .hero .eyebrow{color:var(--teal-bright); display:inline-flex; gap:11px; align-items:center; margin-bottom:30px;}
   .hero .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--teal-bright); box-shadow:0 0 0 4px rgba(46,220,201,.16);}
-  h1.title{font-size:clamp(38px,6.4vw,76px); font-weight:600; color:#fff; max-width:17ch; letter-spacing:-.025em; line-height:1.0;}
+  h1.title{font-size:clamp(40px,7vw,80px); font-weight:600; color:#fff; max-width:15ch; letter-spacing:-.025em; line-height:1.0;}
   h1.title em{font-style:italic; color:var(--teal-bright);}
-  .sub{margin-top:32px; max-width:64ch; font-size:20px; line-height:1.55; color:#C2D0E0;}
+  .sub{margin-top:30px; max-width:60ch; font-size:21px; line-height:1.5; color:#C2D0E0;}
   .sub b{color:#fff; font-weight:600;} .sub .hl{color:var(--teal-bright); font-weight:600;}
-  .meta-row{margin-top:38px; display:flex; flex-wrap:wrap; gap:10px 14px; font-family:"JetBrains Mono",monospace; font-size:11.5px; letter-spacing:.04em; color:#8FA3B8;}
+  .meta-row{margin-top:36px; display:flex; flex-wrap:wrap; gap:10px 14px; font-family:"JetBrains Mono",monospace; font-size:11.5px; letter-spacing:.04em; color:#8FA3B8;}
   .meta-row span{border:1px solid rgba(255,255,255,.12); border-radius:999px; padding:6px 13px;}
   .meta-row b{color:#CBD8E6; font-weight:600;}
 
-  /* ---- stat band ---- */
   .band{margin-top:-52px; position:relative; z-index:10;}
-  .band .grid{display:grid; grid-template-columns:repeat(5,1fr); gap:0; background:var(--card); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow-lg); overflow:hidden;}
-  @media(max-width:900px){.band .grid{grid-template-columns:repeat(2,1fr)}}
-  .band .cell{padding:26px 24px; border-right:1px solid var(--line);}
-  .band .cell:last-child{border-right:none}
-  @media(max-width:900px){.band .cell{border-right:none; border-bottom:1px solid var(--line)}}
-  .band .big{font-family:"Fraunces",serif; font-weight:600; font-size:46px; color:var(--ink); line-height:1; letter-spacing:-.02em;}
-  .band .big .pre{font-size:25px; color:var(--teal-deep); vertical-align:7px; margin-right:1px;}
-  .band .big .suf{font-size:25px; color:var(--teal-deep);}
-  .band .lbl{margin-top:11px; font-family:"JetBrains Mono",monospace; font-size:11px; text-transform:uppercase; letter-spacing:.07em; color:var(--muted); line-height:1.45;}
+  .statband3{display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:0; background:var(--card); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow-lg); overflow:hidden;}
+  @media(max-width:680px){.statband3{grid-template-columns:1fr}}
+  .statband3 .c{padding:30px 28px; border-right:1px solid var(--line);}
+  .statband3 .c:last-child{border-right:none}
+  @media(max-width:680px){.statband3 .c{border-right:none; border-bottom:1px solid var(--line)}}
+  .statband3 .big{font-family:"Fraunces",serif; font-weight:600; font-size:52px; color:var(--ink); line-height:1; letter-spacing:-.02em;}
+  .statband3 .c.hot .big{color:var(--coral-deep);}
+  .statband3 .c.cool .big{color:var(--teal-deep);}
+  .statband3 .lbl{margin-top:12px; font-family:"JetBrains Mono",monospace; font-size:12px; color:var(--muted); line-height:1.5;}
+  .statband3 .lbl b{color:var(--ink);}
 
-  /* ---- sections ---- */
   section{padding:90px 0; position:relative;}
-  .sec-num{font-family:"JetBrains Mono",monospace; font-size:12px; letter-spacing:.2em; color:var(--teal-deep); font-weight:600; margin-bottom:18px;}
+  .sec-num{font-family:"JetBrains Mono",monospace; font-size:12px; letter-spacing:.18em; color:var(--teal-deep); font-weight:600; margin-bottom:18px;}
   .sec-num:before{content:""; display:inline-block; width:26px; height:1.5px; background:var(--teal); vertical-align:middle; margin-right:12px;}
-  h2{font-size:clamp(28px,4vw,44px); font-weight:600; color:var(--ink); max-width:20ch;}
+  h2{font-size:clamp(28px,4vw,44px); font-weight:600; color:var(--ink); max-width:22ch;}
   h2 .accent{color:var(--teal-deep);}
   .dek{color:var(--muted); font-size:19px; margin:20px 0 0; max-width:66ch; line-height:1.6;}
   p.body{color:#33485E; max-width:68ch;} p.body b{color:var(--ink);}
+  .subhead{font-family:"JetBrains Mono",monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--teal-deep); font-weight:700; margin:42px 0 16px;}
+  .claim-line{font-family:"Fraunces",serif; font-weight:500; font-size:clamp(24px,3.3vw,34px); line-height:1.28; color:var(--ink); max-width:24ch; letter-spacing:-.01em;}
+  .claim-line .accent{color:var(--teal-deep);}
+  .boundary{background:#fff; border:1px solid var(--line); border-left:4px solid var(--coral); border-radius:14px; padding:24px 28px; margin-top:34px; box-shadow:var(--shadow);}
+  .boundary .h{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--coral-deep); font-weight:700; margin-bottom:9px;}
+  .boundary p{margin:0; color:#33485E; font-size:15.5px; max-width:90ch;} .boundary b{color:var(--ink);}
 
-  /* dark sections */
   .dark{background:linear-gradient(180deg,var(--navy-900),var(--navy-850)); color:#E7EFF8;}
   .dark h2{color:#fff;} .dark .dek{color:#A9BBCE;} .dark .sec-num{color:var(--teal-bright);} .dark .sec-num:before{background:var(--teal-bright);}
 
-  /* claim block */
-  .claim-line{font-family:"Fraunces",serif; font-weight:500; font-size:clamp(24px,3.3vw,34px); line-height:1.28; color:var(--ink); max-width:24ch; letter-spacing:-.01em;}
-  .claim-line .accent{color:var(--teal-deep);}
-
-  /* boundary callout */
-  .boundary{background:#fff; border:1px solid var(--line); border-left:4px solid var(--coral); border-radius:14px; padding:24px 28px; margin-top:34px; box-shadow:var(--shadow);}
-  .boundary .h{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--coral-deep); font-weight:700; margin-bottom:9px;}
-  .boundary p{margin:0; color:#33485E; font-size:15.5px; max-width:88ch;} .boundary b{color:var(--ink);}
-
-  /* fact index (TOC) */
-  .fact-index{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:42px;}
-  @media(max-width:760px){.fact-index{grid-template-columns:1fr}}
-  .fc{background:#fff; border:1px solid var(--line); border-radius:16px; padding:26px 26px 28px; box-shadow:var(--shadow); position:relative; overflow:hidden;}
-  .fc:before{content:""; position:absolute; left:0; top:0; bottom:0; width:4px; background:linear-gradient(180deg,var(--teal),var(--teal-deep));}
-  .fc .tag{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.12em; color:var(--teal-deep); font-weight:700;}
-  .fc .big{font-family:"Fraunces",serif; font-weight:600; font-size:40px; color:var(--ink); line-height:1; margin:16px 0 10px; letter-spacing:-.02em;}
-  .fc h3{font-size:17px; color:var(--ink); margin:0 0 7px; font-weight:600;}
-  .fc p{margin:0; color:var(--muted); font-size:14px; line-height:1.55;}
-
-  /* cards */
   .card{background:var(--card); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow);}
   .pad{padding:34px 36px;}
   .grid-2{display:grid; grid-template-columns:1.1fr .9fr; gap:24px;}
@@ -124,16 +100,38 @@
   .fill{height:100%; width:0; border-radius:8px; background:linear-gradient(90deg,var(--teal-deep),var(--teal)); transition:width 1.1s cubic-bezier(.2,.7,.2,1);}
   .bar-row .v{font-family:"JetBrains Mono",monospace; font-size:14px; font-weight:600; color:var(--ink); text-align:left;}
 
-  /* big pull stat */
+  /* vertical bars (quarterly + histogram) */
+  .vbars{display:flex; align-items:flex-end; gap:10px; height:240px; padding-top:14px;}
+  .vcol{flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; height:100%;}
+  .vcol .vv{font-family:"JetBrains Mono",monospace; font-size:12px; font-weight:700; color:var(--ink); margin-bottom:7px;}
+  .vcol .vbar{width:100%; max-width:66px; height:0; border-radius:7px 7px 0 0; background:linear-gradient(180deg,var(--teal),var(--teal-deep)); transition:height 1.1s cubic-bezier(.2,.7,.2,1);}
+  .vcol.hot .vbar{background:linear-gradient(180deg,var(--coral),var(--coral-deep));}
+  .vcol .vl{margin-top:11px; font-family:"JetBrains Mono",monospace; font-size:10.5px; color:var(--muted); text-align:center; line-height:1.3;}
+
+  /* regional geo */
+  .geo{display:grid; grid-template-columns:repeat(4,1fr); gap:16px;}
+  @media(max-width:820px){.geo{grid-template-columns:repeat(2,1fr)}}
+  .region{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 18px 20px; box-shadow:var(--shadow);}
+  .region .rh{font-family:"JetBrains Mono",monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:.1em; color:var(--teal-deep); font-weight:700;}
+  .region .rt{font-family:"Fraunces",serif; font-weight:600; font-size:32px; color:var(--ink); line-height:1; margin:8px 0 2px;}
+  .region .rsub{font-family:"JetBrains Mono",monospace; font-size:10.5px; color:var(--faint);}
+  .region .rs{display:flex; flex-wrap:wrap; gap:6px; margin-top:14px;}
+  .chip2{font-family:"JetBrains Mono",monospace; font-size:11px; padding:4px 8px; border-radius:6px; background:#EEF2F7; color:var(--muted); white-space:nowrap;}
+  .chip2.q2{background:rgba(16,182,165,.12); color:var(--teal-deep);}
+  .chip2.q3{background:rgba(16,182,165,.30); color:#06463f;}
+  .chip2.q4{background:var(--teal-deep); color:#fff;}
+
+  /* pull stat */
   .pull{display:flex; gap:26px; align-items:flex-start; margin-top:30px;}
   .pull .qn{font-family:"Fraunces",serif; font-weight:600; font-size:74px; color:var(--teal-deep); line-height:.85; letter-spacing:-.03em; flex:0 0 auto;}
   .pull .qt{font-size:18px; color:#33485E; max-width:52ch; padding-top:6px;} .pull .qt b{color:var(--ink);}
 
-  /* svg chart shell */
-  .svg-card svg{width:100%; height:auto; display:block;}
-  .axis{font-family:"JetBrains Mono",monospace; font-size:10px; fill:var(--faint);}
-  .annot{font-family:"JetBrains Mono",monospace; font-size:10.5px; fill:var(--ink);}
-  .annot-b{font-family:"Inter",sans-serif; font-size:12px; font-weight:600; fill:var(--ink);}
+  /* example callout */
+  .example{background:linear-gradient(180deg,#fff,#FBFDFD); border:1px solid var(--teal-ghost); border-left:4px solid var(--teal); border-radius:14px; padding:26px 30px; margin-top:30px; box-shadow:var(--shadow);}
+  .example .h{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--teal-deep); font-weight:700; margin-bottom:12px;}
+  .example .q{font-family:"Fraunces",serif; font-size:23px; line-height:1.4; color:var(--ink); max-width:40ch;}
+  .example .q b{color:var(--teal-deep);}
+  .example .src{font-family:"JetBrains Mono",monospace; font-size:11.5px; color:var(--muted); margin-top:14px;}
 
   /* donut */
   .donut-wrap{display:flex; gap:34px; align-items:center; flex-wrap:wrap;}
@@ -141,6 +139,28 @@
   .legend .li{display:flex; align-items:center; gap:11px; font-size:14.5px;}
   .legend .li .sw{width:13px;height:13px;border-radius:4px;flex:0 0 auto;}
   .legend .li .nm{color:var(--ink); font-weight:500;} .legend .li .ct{margin-left:auto; font-family:"JetBrains Mono",monospace; font-weight:600; color:var(--muted);}
+
+  /* deal teardown */
+  .dealcard{display:flex; flex-wrap:wrap; gap:14px 28px; align-items:center; background:var(--card); border:1px solid var(--line); border-left:4px solid var(--teal); border-radius:14px; padding:20px 24px; box-shadow:var(--shadow); margin-top:30px;}
+  .dealcard .nm{font-family:"Fraunces",serif; font-weight:600; font-size:21px; color:var(--ink);}
+  .dealcard .f{font-family:"JetBrains Mono",monospace; font-size:11.5px; color:var(--muted); margin-top:4px; line-height:1.5;}
+  .dealcard .f b{color:var(--ink); font-weight:600;}
+  .dealcard .tags{display:flex; gap:8px; margin-left:auto; flex-wrap:wrap;}
+  .dealcard .ftag{font-family:"JetBrains Mono",monospace; font-size:10.5px; font-weight:700; letter-spacing:.03em; padding:6px 11px; border-radius:7px; background:var(--teal-ghost); color:var(--teal-deep);}
+  .timeline{position:relative; margin-top:36px; padding-left:36px; max-width:880px;}
+  .timeline:before{content:""; position:absolute; left:9px; top:8px; bottom:16px; width:2px; background:linear-gradient(180deg,var(--teal),var(--line-2));}
+  .tl{position:relative; padding-bottom:30px;}
+  .tl:last-child{padding-bottom:0;}
+  .tl:before{content:""; position:absolute; left:-32px; top:3px; width:14px; height:14px; border-radius:50%; background:var(--teal); border:3px solid #fff; box-shadow:0 0 0 1.5px var(--teal);}
+  .tl.fund:before{background:var(--coral); box-shadow:0 0 0 1.5px var(--coral);}
+  .tl .top{display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:6px;}
+  .tl .d{font-family:"JetBrains Mono",monospace; font-weight:700; font-size:13px; color:var(--ink);}
+  .tl .typ{font-family:"JetBrains Mono",monospace; font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:3px 8px; border-radius:6px; background:#EEF2F7; color:var(--muted);}
+  .tl .typ.rfp{background:var(--teal-ghost); color:var(--teal-deep);}
+  .tl .typ.bud{background:rgba(240,98,60,.12); color:var(--coral-deep);}
+  .tl .typ.con{background:rgba(20,50,87,.10); color:var(--navy-700);}
+  .tl .ti{font-size:16.5px; color:#33485E; line-height:1.45;} .tl .ti b{color:var(--ink); font-weight:600;}
+  .tl .src{font-family:"JetBrains Mono",monospace; font-size:11.5px; color:var(--teal-deep); margin-top:5px; display:inline-block;}
 
   /* table */
   .tablewrap{overflow-x:auto; border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); background:var(--card);}
@@ -155,12 +175,12 @@
   .pill.sole{background:rgba(240,98,60,.12); color:var(--coral-deep);}
   .st-tag{font-family:"JetBrains Mono",monospace; font-weight:600; font-size:11px; color:var(--teal-deep); background:var(--teal-ghost); padding:3px 8px; border-radius:6px;}
 
-  /* takeaways */
+  /* playbook */
   .tk-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:22px;}
   @media(max-width:760px){.tk-grid{grid-template-columns:1fr}}
-  .tk{background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.10); border-radius:var(--r); padding:30px; transition:.3s; position:relative; overflow:hidden;}
+  .tk{background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.10); border-radius:var(--r); padding:30px; transition:.3s;}
   .tk:hover{border-color:rgba(46,220,201,.4); background:rgba(46,220,201,.05);}
-  .tk .n{font-family:"JetBrains Mono",monospace; font-weight:700; color:var(--teal-bright); font-size:13px; letter-spacing:.1em;}
+  .tk .n{font-family:"JetBrains Mono",monospace; font-weight:700; color:var(--teal-bright); font-size:13px; letter-spacing:.08em;}
   .tk h3{font-size:21px; color:#fff; margin:12px 0 9px; font-weight:600;}
   .tk p{margin:0; color:#A9BBCE; font-size:15px; line-height:1.62;}
 
@@ -173,13 +193,13 @@
   .method li .tk2{color:var(--teal-bright); font-weight:700;} .method b{color:#fff;}
 
   .note{font-family:"JetBrains Mono",monospace; font-size:11.5px; color:var(--faint); margin-top:16px; line-height:1.6;}
-  .subhead{font-family:"JetBrains Mono",monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--teal-deep); font-weight:700; margin:42px 0 16px;}
 
-  /* footer */
   footer{background:var(--navy-950); color:#9FB1C5; padding:64px 0 48px;}
-  .cta{background:linear-gradient(115deg,var(--navy-800),#0c3057); border:1px solid rgba(46,220,201,.24); border-radius:22px; padding:46px 46px; display:flex; justify-content:space-between; align-items:center; gap:28px; flex-wrap:wrap; box-shadow:var(--shadow);}
-  .cta h3{color:#fff; font-size:28px; max-width:22ch;}
-  .cta p{color:#A9BBCE; margin:11px 0 0; max-width:46ch; font-size:15.5px;}
+  .cta{background:linear-gradient(115deg,var(--navy-800),#0c3057); border:1px solid rgba(46,220,201,.24); border-radius:22px; padding:46px 46px; box-shadow:var(--shadow);}
+  .cta .big{font-family:"Fraunces",serif; font-weight:600; color:#fff; font-size:clamp(24px,3vw,32px); line-height:1.2; max-width:24ch;}
+  .cta .big .accent{color:var(--teal-bright);}
+  .cta .row{display:flex; justify-content:space-between; align-items:center; gap:28px; flex-wrap:wrap; margin-top:22px;}
+  .cta p{color:#A9BBCE; margin:0; max-width:48ch; font-size:15.5px;}
   .btn{background:var(--teal); color:#042521; font-weight:700; padding:16px 28px; border-radius:12px; font-family:"JetBrains Mono",monospace; font-size:14px; letter-spacing:.03em; white-space:nowrap; transition:.2s;}
   .btn:hover{background:var(--teal-bright); transform:translateY(-1px);}
   .foot-meta{display:flex; justify-content:space-between; align-items:center; margin-top:46px; flex-wrap:wrap; gap:16px; font-family:"JetBrains Mono",monospace; font-size:11.5px; color:#6F8298; letter-spacing:.03em;}
@@ -203,142 +223,156 @@
 <!-- HERO -->
 <header class="hero"><div class="wrap">
   <div class="eyebrow"><span class="dot"></span> Public-Safety Market Brief · License-Plate Readers</div>
-  <h1 class="title">The plate-reader market is bigger — and <em>more winnable</em> — than your pipeline thinks.</h1>
-  <p class="sub">
-    <b>Flock Safety dominates the headlines. But most of this market is bid out in the open — to buyers your prospect list can't even see.</b> The opportunity isn't beating the leader head-on; it's reaching the hidden, contestable majority first. We analyzed every public-safety license-plate-reader solicitation we could find: <span class="hl">167 of them, from 82 agencies across 29 states.</span>
-  </p>
+  <h1 class="title">Your ALPR pipeline is <em>hiding</em> from you.</h1>
+  <p class="sub">You can see maybe <b>1 in 10</b> of the ALPR deals in your own market. The other nine are real, public, and posted — <b>just not where your filters look.</b></p>
   <div class="meta-row">
     <span><b>Scope</b> &nbsp;Jan 2024 – Jun 2026</span>
-    <span><b>Sample</b> &nbsp;167 solicitations · 82 agencies</span>
+    <span><b>Sample</b> &nbsp;167 solicitations · 82 agencies · 29 states</span>
     <span><b>Unit</b> &nbsp;RFP counts, not dollars</span>
     <span><b>Filter</b> &nbsp;fire / EMS / police buyers only</span>
   </div>
 </div></header>
 
-<!-- STAT BAND -->
-<div class="band"><div class="wrap"><div class="grid reveal">
-  <div class="cell"><div class="big num"><span data-count="167">0</span></div><div class="lbl">Solicitations from public-safety buyers</div></div>
-  <div class="cell"><div class="big num"><span data-count="82">0</span></div><div class="lbl">Distinct agencies in-market</div></div>
-  <div class="cell"><div class="big num"><span data-count="29">0</span></div><div class="lbl">States with active demand</div></div>
-  <div class="cell"><div class="big num">~<span data-count="90">0</span><span class="suf">%</span></div><div class="lbl">Buy via city / county procurement, not a "police agency" record</div></div>
-  <div class="cell"><div class="big num">~5</div><div class="lbl">Days between new bids, on average</div></div>
+<!-- HERO STAT (3-up) -->
+<div class="band"><div class="wrap"><div class="statband3 reveal">
+  <div class="c"><div class="big num"><span data-count="167">0</span></div><div class="lbl">Public ALPR solicitations<br><b>Jan 2024 – Jun 2026</b></div></div>
+  <div class="c cool"><div class="big num">~<span data-count="17">0</span></div><div class="lbl">Show up under a<br><b>"police agency" record</b></div></div>
+  <div class="c hot"><div class="big num">~<span data-count="150">0</span></div><div class="lbl">Are filed<br><b>somewhere else entirely</b></div></div>
 </div></div></div>
 
-<!-- THE THESIS -->
-<section><div class="wrap reveal">
-  <div class="sec-num">THE THESIS — ONE CLAIM, THREE FACTS</div>
-  <p class="claim-line">Most of the police plate-reader market is bid out <span class="accent">in the open</span>, to buyers most vendors <span class="accent">never see</span> — so the opening is to reach the hidden, contestable majority first.</p>
-
-  <div class="boundary">
-    <div class="h">What this brief is NOT claiming</div>
-    <p>We're not saying Flock is losing or the category is wide open. Flock has a real moat, and many of its wins close <b>before an RFP ever appears</b> — pilots, council approvals, cooperative contracts — so this RFP-based view <b>undercounts the leader.</b> The claim is narrower and more useful: alongside those quiet wins sits a <b>large, named, contestable slice</b> of demand, and most teams never see it. The three facts below are the map of that slice.</p>
-  </div>
-
-  <div class="subhead">The market is real and sustained</div>
-  <div class="card pad svg-card">
-    <div class="chart-h">Solicitations per month · Mar 2024 – Jun 2026</div>
-    <div class="chart-t">28 months of demand — roughly one new bid every five days</div>
-    <div id="cadence"></div>
-  </div>
-
-  <div class="fact-index">
-    <div class="fc"><div class="tag">FACT 01 · WHO</div><div class="big num">~90%</div><h3>The buyers hide under the wrong label</h3><p>9 in 10 buy through city or county procurement — not a "police agency" record your filters look for.</p></div>
-    <div class="fc"><div class="tag">FACT 02 · WHERE</div><div class="big num">53k</div><h3>The demand is small-town America</h3><p>Median buyer is a city of ~53,000; two-thirds serve fewer than 100,000 residents.</p></div>
-    <div class="fc"><div class="tag">FACT 03 · HOW</div><div class="big num">154<span style="font-size:24px;color:var(--faint)">/167</span></div><h3>It's bid out in the open</h3><p>92% are open competitive bids and 89% name no vendor — the spec is still yours to shape.</p></div>
-  </div>
+<!-- INTRO -->
+<section><div class="wrap narrow reveal">
+  <div class="sec-num">THE FINDING</div>
+  <p class="body" style="font-size:19px; color:#2C3D50">NationGraph analyzed every public-safety ALPR solicitation from January 2024 through June 2026: <b>167 buying notices, 82 named agencies, 29 states.</b> Real RFPs, bids, and quotes — not market-size estimates, not inferred intent.</p>
+  <p class="body" style="margin-top:22px">Here is the finding most vendors miss: <b>roughly 90% of those buyers were not filed under a formal "police agency" record.</b> The cop shop uses the camera. The <i>City of X purchasing office</i> posts the bid. So a sales team that prospects by "police department" — which is almost all of them — is structurally blind to most of its own pipeline.</p>
+  <p class="claim-line" style="margin-top:30px">That's not a market-size problem. <span class="accent">It's a lookup problem.</span> And lookup problems are fixable.</p>
 </div></section>
 
-<!-- FACT 01 — WHO -->
+<!-- WHY THIS MATTERS + TIMELINE + MAP -->
+<section><div class="wrap reveal">
+  <div class="sec-num">WHY IT BEATS "FLOCK ALREADY WON"</div>
+  <h2>There's a second market <span class="accent">underneath the visible one.</span></h2>
+  <p class="dek">The category story you've heard — Flock dominates, the network effect compounds, deals close before a bid goes public — is true. But it describes the <i>visible</i> market everyone's already fighting over. The public record shows a second market beneath it: agencies entering procurement through city, county, and finance channels, recurring, spread across 29 states, and mostly contestable.</p>
+
+  <div class="subhead">Volume by quarter — sustained, and building</div>
+  <div class="card pad">
+    <div class="chart-h">Public-safety ALPR solicitations · by quarter</div>
+    <div class="chart-t">Not scraps — a recurring, deepening pipeline</div>
+    <div class="vbars" id="qbars">
+      <div class="vcol"><div class="vv">6</div><div class="vbar" data-h="21"></div><div class="vl">’24<br>Q1</div></div>
+      <div class="vcol"><div class="vv">10</div><div class="vbar" data-h="34"></div><div class="vl">Q2</div></div>
+      <div class="vcol"><div class="vv">16</div><div class="vbar" data-h="55"></div><div class="vl">Q3</div></div>
+      <div class="vcol"><div class="vv">15</div><div class="vbar" data-h="52"></div><div class="vl">Q4</div></div>
+      <div class="vcol"><div class="vv">15</div><div class="vbar" data-h="52"></div><div class="vl">’25<br>Q1</div></div>
+      <div class="vcol"><div class="vv">12</div><div class="vbar" data-h="41"></div><div class="vl">Q2</div></div>
+      <div class="vcol"><div class="vv">29</div><div class="vbar" data-h="100"></div><div class="vl">Q3</div></div>
+      <div class="vcol"><div class="vv">16</div><div class="vbar" data-h="55"></div><div class="vl">Q4</div></div>
+      <div class="vcol"><div class="vv">28</div><div class="vbar" data-h="97"></div><div class="vl">’26<br>Q1</div></div>
+      <div class="vcol"><div class="vv">20</div><div class="vbar" data-h="69"></div><div class="vl">Q2*</div></div>
+    </div>
+    <p class="note">*2026 Q2 partial (through June). The visible record trends up, but we don't headline a growth rate: the database skews toward recent filings, so some of the rise reflects fuller capture of recent quarters. The honest read — demand is steady and substantial every quarter, not a one-off.</p>
+  </div>
+
+  <div class="subhead">…and geographically distributed — 29 states, all four regions</div>
+  <div class="geo">
+    <div class="region"><div class="rh">South</div><div class="rt">53</div><div class="rsub">11 states + DC</div><div class="rs"><span class="chip2 q4">NC 12</span><span class="chip2 q4">FL 11</span><span class="chip2 q4">TX 10</span><span class="chip2 q3">MD 5</span><span class="chip2 q2">GA 4</span><span class="chip2 q2">DC 3</span><span class="chip2 q2">MS 3</span><span class="chip2 q2">SC 2</span><span class="chip2">AL 1</span><span class="chip2">TN 1</span><span class="chip2">VA 1</span></div></div>
+    <div class="region"><div class="rh">West</div><div class="rt">24</div><div class="rsub">5 states</div><div class="rs"><span class="chip2 q4">CA 14</span><span class="chip2 q3">CO 5</span><span class="chip2 q2">OR 3</span><span class="chip2">ID 1</span><span class="chip2">UT 1</span></div></div>
+    <div class="region"><div class="rh">Northeast</div><div class="rt">24</div><div class="rsub">6 states</div><div class="rs"><span class="chip2 q4">NY 10</span><span class="chip2 q3">PA 8</span><span class="chip2 q2">MA 2</span><span class="chip2 q2">NJ 2</span><span class="chip2">CT 1</span><span class="chip2">ME 1</span></div></div>
+    <div class="region"><div class="rh">Midwest</div><div class="rt">18</div><div class="rsub">7 states</div><div class="rs"><span class="chip2 q3">OH 7</span><span class="chip2 q2">IA 4</span><span class="chip2 q2">WI 2</span><span class="chip2 q2">NE 2</span><span class="chip2">IL 1</span><span class="chip2">MI 1</span><span class="chip2">MN 1</span></div></div>
+  </div>
+  <p class="note">Counts are solicitations resolved to a state (119 of 167). Chip shade scales with volume. This is breadth, not a few big departments.</p>
+</div></section>
+
+<!-- FACT 1 — HIDDEN RECORD -->
 <section class="dark"><div class="wrap reveal">
-  <div class="sec-num">FACT 01 · WHO — THE BLINDSPOT</div>
-  <h2>Your customer is a city or a county — <span class="accent">not an "agency" on a list.</span></h2>
-  <p class="dek">The single most expensive assumption in public-safety prospecting is that you find police buyers by filtering for police agencies. You don't. Of 119 named buyers, the purchase authority sits with a <b style="color:#fff">city or county procurement office</b> the overwhelming majority of the time — buying on behalf of a department, not as a standalone law-enforcement entity.</p>
+  <div class="sec-num">FACT 1 — THE BUYER IS HIDDEN</div>
+  <h2>The buyer is filed under <span class="accent">the wrong record.</span></h2>
+  <p class="dek">In most cases the buyer of record is not a standalone PD. The purchase posts through a city, county, procurement department, finance office, or board of commissioners acting <i>on behalf of</i> law enforcement. End user: police. Budget justification: public safety. Record on file: "City of X — General Services."</p>
   <div class="grid-2" style="margin-top:34px; align-items:start">
     <div class="card pad" style="background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.1)">
       <div class="chart-h" style="color:#8FA3B8">Composition of public-safety buyers · n = 119 named</div>
-      <div class="chart-t" style="color:#fff">By governing institution</div>
+      <div class="chart-t" style="color:#fff">Who actually posts the bid</div>
       <div class="bars" id="buyerBars">
-        <div class="bar-row"><div class="k" style="color:#E7EFF8">Municipal police<small style="color:#7E92A8">CITY PD</small></div><div class="track" style="background:rgba(255,255,255,.08)"><div class="fill" data-w="100"></div></div><div class="v" style="color:#fff">77</div></div>
+        <div class="bar-row"><div class="k" style="color:#E7EFF8">Municipal (city)<small style="color:#7E92A8">ON BEHALF OF PD</small></div><div class="track" style="background:rgba(255,255,255,.08)"><div class="fill" data-w="100"></div></div><div class="v" style="color:#fff">77</div></div>
         <div class="bar-row"><div class="k" style="color:#E7EFF8">County / sheriff</div><div class="track" style="background:rgba(255,255,255,.08)"><div class="fill" data-w="25"></div></div><div class="v" style="color:#fff">19</div></div>
-        <div class="bar-row"><div class="k" style="color:#E7EFF8">State law enf.<small style="color:#7E92A8">SP / DPS</small></div><div class="track" style="background:rgba(255,255,255,.08)"><div class="fill" data-w="13"></div></div><div class="v" style="color:#fff">10</div></div>
+        <div class="bar-row"><div class="k" style="color:#E7EFF8">State agency<small style="color:#7E92A8">SP / DPS</small></div><div class="track" style="background:rgba(255,255,255,.08)"><div class="fill" data-w="13"></div></div><div class="v" style="color:#fff">10</div></div>
         <div class="bar-row"><div class="k" style="color:#E7EFF8">Standalone police agency</div><div class="track" style="background:rgba(255,255,255,.08)"><div class="fill" data-w="10"></div></div><div class="v" style="color:#fff">8</div></div>
         <div class="bar-row"><div class="k" style="color:#E7EFF8">Federal / other</div><div class="track" style="background:rgba(255,255,255,.08)"><div class="fill" data-w="6"></div></div><div class="v" style="color:#fff">5</div></div>
       </div>
     </div>
     <div style="padding:4px">
-      <div class="pull" style="margin-top:0"><div class="qn" style="color:var(--teal-bright)">~90%</div><div class="qt" style="color:#C2D0E0">of buyers are <b style="color:#fff">not</b> filed under a formal "police agency" record. If your prospect list filters to law-enforcement entities by type, that's roughly how much of the market you simply never see.</div></div>
-      <p class="body" style="color:#A9BBCE; margin-top:24px; font-size:15.5px">State demand is real too — <b style="color:#fff">Maryland State Police, Pennsylvania State Police, Texas DPS, the South Carolina Law Enforcement Division,</b> and <b style="color:#fff">DC's Metropolitan Police</b> all appear. But the center of gravity is local, and the record it's filed under is municipal.</p>
+      <div class="pull" style="margin-top:0"><div class="qn" style="color:var(--teal-bright)">~90%</div><div class="qt" style="color:#C2D0E0">of buyers are <b style="color:#fff">not</b> filed under a formal "police agency" record. Prospect by department name and that's how much of your own market you never see.</div></div>
+    </div>
+  </div>
+
+  <div class="example" style="background:rgba(255,255,255,.04); border-color:rgba(46,220,201,.25); border-left-color:var(--teal-bright)">
+    <div class="h" style="color:var(--teal-bright)">One real deal · "police" appears nowhere in the record</div>
+    <div class="q" style="color:#fff">In <b style="color:var(--teal-bright)">Burke County, Georgia</b>, the buyer that posted a 2026 license-plate-reader camera RFP isn't a police department or a sheriff's office. It's the <b style="color:var(--teal-bright)">Burke County Board of Commissioners.</b></div>
+    <div class="src" style="color:#8FA3B8">Solicitation: "License Plate Recognition (LPR) Camera System (RFP)" · due Jul 8, 2026 · agency on file: <b style="color:#C2D0E0">Burke County — Board of Commissioners</b> · search law-enforcement records and it does not exist.</div>
+  </div>
+</div></section>
+
+<!-- FACT 2 — OPEN -->
+<section><div class="wrap reveal">
+  <div class="sec-num">FACT 2 — THE DEMAND IS OPEN</div>
+  <h2>Most of the demand is <span class="accent">genuinely contestable.</span></h2>
+  <p class="dek">Of 167 solicitations, <b style="color:var(--ink)">154 were open competitive bids; only 13 were sole-source.</b> Sole-source means the buyer has effectively picked someone — low-probability for a challenger. Open competitive means the agency is formally inviting responses. The path isn't closed.</p>
+  <p class="body" style="margin-top:18px">One honest caveat, up front so it isn't a gotcha: <b>"open" and "winnable" are not the same thing.</b> Some open RFPs are written around an incumbent before they're ever posted, and we can't see pre-wiring from the public record. What we <i>can</i> say precisely: most visible ALPR demand is not formally locked to a vendor at the moment it appears. That's the opening — whether you walk through it depends on how early you get there.</p>
+  <div class="grid-2" style="margin-top:32px; align-items:center">
+    <div class="card pad">
+      <div class="chart-h">Bid type · n = 167</div>
+      <div class="chart-t">154 open vs 13 sole-source</div>
+      <div class="bars">
+        <div class="bar-row"><div class="k">Open competitive</div><div class="track"><div class="fill" data-w="100"></div></div><div class="v">154</div></div>
+        <div class="bar-row"><div class="k">Sole-source<small>near-dead for a challenger</small></div><div class="track"><div class="fill" data-w="8" style="background:linear-gradient(90deg,var(--coral-deep),var(--coral))"></div></div><div class="v">13</div></div>
+      </div>
+      <p class="note">A vendor name appears in only ~11% of specs. Read that as "the spec leaves room," not "the deal is up for grabs" — neutral specs are normal, and some are pre-wired.</p>
+    </div>
+    <div style="padding:4px">
+      <div class="pull" style="margin-top:0"><div class="qn">92%</div><div class="qt">of solicitations are open competitive bids — not formally locked to a vendor when they post. The other 8% are sole-source: don't spend equally across all 167.</div></div>
     </div>
   </div>
 </div></section>
 
-<!-- FACT 02 — WHERE -->
+<!-- FACT 3 — LONG TAIL -->
 <section><div class="wrap reveal">
-  <div class="sec-num">FACT 02 · WHERE — THE LONG TAIL</div>
-  <h2>This isn't a big-city story. <span class="accent">It's small-town America.</span></h2>
-  <p class="dek">The headlines go to the major departments; the volume is in the long tail. For municipal buyers with a population on record, the typical plate-reader customer is a city of about <b>53,000</b> — and two-thirds serve fewer than 100,000 residents.</p>
-  <div class="grid-2" style="margin-top:32px; align-items:center">
-    <div class="card pad">
-      <div class="chart-h">Municipal buyers by population served · n = 48</div>
-      <div class="chart-t">The demand lives under 100k</div>
-      <div class="bars" id="sizeBars">
-        <div class="bar-row"><div class="k">Under 25,000</div><div class="track"><div class="fill" data-w="68"></div></div><div class="v">13</div></div>
-        <div class="bar-row"><div class="k">25k – 100k</div><div class="track"><div class="fill" data-w="100"></div></div><div class="v">19</div></div>
-        <div class="bar-row"><div class="k">100k – 250k</div><div class="track"><div class="fill" data-w="37"></div></div><div class="v">7</div></div>
-        <div class="bar-row"><div class="k">250,000+</div><div class="track"><div class="fill" data-w="47" style="background:linear-gradient(90deg,#1C3E63,#3A6FA0)"></div></div><div class="v">9</div></div>
-      </div>
+  <div class="sec-num">FACT 3 — THE OPPORTUNITY IS IN THE LONG TAIL</div>
+  <h2>This isn't the big cities. <span class="accent">It's the long tail.</span></h2>
+  <p class="dek">Among municipal buyers with population data (n = 48), the median ALPR buyer served about <b style="color:var(--ink)">53,000</b> people; two-thirds served fewer than 100,000. Small jurisdictions have thinner technical staff and less vendor-evaluation muscle — so a challenger can still educate, frame tradeoffs, and shape requirements before they harden. And references travel: one win propagates through sheriff networks and cooperative purchasing groups to the agencies next door.</p>
+  <div class="card pad" style="margin-top:30px">
+    <div class="chart-h">Municipal buyers by population served · n = 48</div>
+    <div class="chart-t">The shape is a long tail — the peak is 25k–50k, not the metros</div>
+    <div class="vbars" id="hist">
+      <div class="vcol"><div class="vv">6</div><div class="vbar" data-h="55"></div><div class="vl">under<br>10k</div></div>
+      <div class="vcol"><div class="vv">7</div><div class="vbar" data-h="64"></div><div class="vl">10–25k</div></div>
+      <div class="vcol"><div class="vv">11</div><div class="vbar" data-h="100"></div><div class="vl">25–50k</div></div>
+      <div class="vcol"><div class="vv">8</div><div class="vbar" data-h="73"></div><div class="vl">50–100k</div></div>
+      <div class="vcol"><div class="vv">7</div><div class="vbar" data-h="64"></div><div class="vl">100–250k</div></div>
+      <div class="vcol hot"><div class="vv">9</div><div class="vbar" data-h="82"></div><div class="vl">250k+</div></div>
     </div>
-    <div style="padding:4px">
-      <div class="pull" style="margin-top:0"><div class="qn">53k</div><div class="qt">median population of a municipal plate-reader buyer.</div></div>
-      <p class="body" style="margin-top:24px; font-size:15.5px">The tail runs deep — bids from places as small as <b>Havelock, Iowa</b> (pop. 124) and <b>Dunnellon, Florida</b> (2,005). For a challenger, that's the opening: hundreds of small agencies where the incumbent's network advantage is thinnest and one reference customer travels far.</p>
-    </div>
+    <p class="note">Median ~53,000 · two-thirds under 100,000. The 250k+ bar (coral) is the handful of big departments everyone already chases — the volume is to its left. (Population on file for 48 of 53 municipal buyers.)</p>
   </div>
-
-  <div class="subhead">…and it's spread across 29 states</div>
-  <div class="card pad">
-    <div class="chart-h">Public-safety plate-reader solicitations · by state</div>
-    <div class="chart-t">29 states active — top 18 shown</div>
-    <div class="bars" id="stateBars"></div>
-    <p class="note">Plus 11 more states with one solicitation each: AL · CT · ID · IL · ME · MI · MN · TN · UT · VA — and additional unresolved records.</p>
-  </div>
-  <p class="note">Population reported for 48 of 53 municipal buyers. County, state, and federal buyers excluded — their populations describe regions, not the jurisdiction policed.</p>
 </div></section>
 
-<!-- FACT 03 — HOW -->
-<section><div class="wrap reveal">
-  <div class="sec-num">FACT 03 · HOW — OPEN &amp; CONTESTABLE</div>
-  <h2>Most of this demand is bid <span class="accent">in the open.</span></h2>
-  <p class="dek">Of the 167 solicitations, <b style="color:var(--ink)">154 are open, competitive bids</b> and just 13 are sole-source. In 89% of specs, no vendor is named at all.</p>
-  <p class="body" style="margin-top:18px">Read it honestly: competitive bidding is <i>legally required</i> above most dollar thresholds, so an open RFP is the default posture, not proof the incumbent loses. What "open" buys you is narrower and still valuable — the <b>technical spec, the evaluation criteria, and the shortlist are all still in play</b>, <i>if</i> you engage before the bid publishes. A sole-source notice is the opposite: the vendor's pre-selected and the cycle's a dead end. Skip those.</p>
-  <div class="grid-2" style="margin-top:32px; align-items:center">
-    <div class="card pad">
-      <div class="chart-h">Vendor named in the solicitation · n = 167</div>
-      <div class="chart-t">No vendor named, 9 times out of 10</div>
-      <div class="donut-wrap">
-        <svg class="donut" width="200" height="200" viewBox="0 0 42 42" role="img" aria-label="89 percent of solicitations name no vendor.">
-          <circle cx="21" cy="21" r="15.915" fill="none" stroke="#EEF2F7" stroke-width="6.5"></circle>
-          <circle cx="21" cy="21" r="15.915" fill="none" stroke="#10B6A5" stroke-width="6.5" stroke-dasharray="89.2 10.8" stroke-dashoffset="25"></circle>
-          <circle cx="21" cy="21" r="15.915" fill="none" stroke="#F0623C" stroke-width="6.5" stroke-dasharray="6.6 93.4" stroke-dashoffset="-64.2"></circle>
-          <circle cx="21" cy="21" r="15.915" fill="none" stroke="#143257" stroke-width="6.5" stroke-dasharray="1.8 98.2" stroke-dashoffset="-70.8"></circle>
-          <circle cx="21" cy="21" r="15.915" fill="none" stroke="#5C7796" stroke-width="6.5" stroke-dasharray="1.8 98.2" stroke-dashoffset="-72.6"></circle>
-          <text x="21" y="19.6" text-anchor="middle" font-size="8.5" font-weight="600" font-family="Fraunces,serif" fill="#0A1A30">89%</text>
-          <text x="21" y="25.5" text-anchor="middle" font-size="2.9" font-family="JetBrains Mono,monospace" fill="#566679">VENDOR-NEUTRAL</text>
-        </svg>
-        <div class="legend">
-          <div class="li"><span class="sw" style="background:#10B6A5"></span><span class="nm">No vendor named — open spec</span><span class="ct">149</span></div>
-          <div class="li"><span class="sw" style="background:#F0623C"></span><span class="nm">Flock Safety</span><span class="ct">11</span></div>
-          <div class="li"><span class="sw" style="background:#143257"></span><span class="nm">Motorola / Vigilant</span><span class="ct">3</span></div>
-          <div class="li"><span class="sw" style="background:#5C7796"></span><span class="nm">Rekor</span><span class="ct">3</span></div>
-          <div class="li"><span class="sw" style="background:#9AA8B8"></span><span class="nm">Genetec</span><span class="ct">1</span></div>
-        </div>
-      </div>
+<!-- ANATOMY OF A DEAL -->
+<section class="dark"><div class="wrap reveal">
+  <div class="sec-num">ANATOMY OF A DEAL</div>
+  <h2>One buyer's paper trail — <span class="accent">not one record says "police agency."</span></h2>
+  <p class="dek">The three facts in motion. Every place Cincinnati's license-plate-reader program surfaces in the data, in order — each under the <b style="color:#fff">City</b>, in a procurement RFP or the city capital budget, never under a standalone law-enforcement record. A police-agency filter would have missed all of it.</p>
+  <div class="dealcard" style="background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.12); border-left-color:var(--teal-bright)">
+    <div>
+      <div class="nm" style="color:#fff">City of Cincinnati</div>
+      <div class="f" style="color:#8FA3B8"><b style="color:#fff">Municipality</b> · OH · pop. ~309,000 &nbsp;|&nbsp; buyer of record: <b style="color:#fff">City Procurement</b> &nbsp;|&nbsp; end user: CPD — Chief <b style="color:#fff">Teresa A. Theetge</b></div>
     </div>
-    <div style="padding:4px">
-      <p class="body" style="font-size:15.5px">Where a brand <i>does</i> appear, the leader dominates — and shows up as sole-source awards (Haines City, FL: <i>"Flock Safety ALPR Cameras, Sole Source"</i>). Your sharpest targets are the <b>"comparable-to" specs</b>: when <b>Burke County, GA</b> writes for cameras <i>"comparable to Flock Safety technology,"</i> it's openly benchmarking alternatives — the clearest shot a challenger gets.</p>
-      <p class="body" style="font-size:15.5px">One honest caveat: "comparable to Flock" isn't a guaranteed opening — it can signal an agency that wants Flock-<i>grade</i> capability and still lands on Flock. It's where your odds are best, not where they're certain.</p>
-    </div>
+    <div class="tags"><span class="ftag">FACT 1 ✓</span><span class="ftag">FACT 2 ✓ open bids</span></div>
   </div>
-  <p class="note">Sole-source share has stayed in single digits every year — but with this sample we won't dress a few data points up as a trend. The defensible read: lock-outs are the exception, not the rule.</p>
+  <div class="timeline">
+    <div class="tl"><div class="top"><span class="d" style="color:#fff">Nov 2022</span><span class="typ rfp">RFP · open bid</span></div><div class="ti" style="color:#C2D0E0">Term contract for <b style="color:#fff">Vigilant License Plate Reader Systems</b> — the program's first competitive solicitation, through City procurement.</div><a class="src" href="https://www.cincinnati-oh.gov/procurement/rfp/231R905532">cincinnati-oh.gov/procurement →</a></div>
+    <div class="tl"><div class="top"><span class="d" style="color:#fff">Oct 2023</span><span class="typ rfp">RFP · open bid</span></div><div class="ti" style="color:#C2D0E0">"<b style="color:#fff">Mobile License Plate Reader Camera Systems</b>" — the program expands to mobile units. Another open, city-issued bid.</div><a class="src" href="https://www.cincinnati-oh.gov/procurement/rfp/242P901034">cincinnati-oh.gov/procurement →</a></div>
+    <div class="tl fund"><div class="top"><span class="d" style="color:#fff">Jul 2025</span><span class="typ bud">Capital budget</span></div><div class="ti" style="color:#C2D0E0">FY2026–27 Approved Capital Budget line: <b style="color:#fff">$300,000 — "Police Fixed License Plate Reader Cameras"</b> (Dept. Priority 5), funding new fixed, mobile &amp; quick-deploy LPR cameras. The next wave, already funded in the city's own budget book.</div><a class="src" href="https://www.cincinnati-oh.gov/sites/budget/assets/Volume-2---Approved-Capital.pdf">FY26–27 Approved Capital Budget, Vol. II →</a></div>
+    <div class="tl"><div class="top"><span class="d" style="color:#fff">On file now</span><span class="typ con">The people</span></div><div class="ti" style="color:#C2D0E0">End user: <b style="color:#fff">Police Chief Teresa A. Theetge</b>. Buyer of record: <b style="color:#fff">City of Cincinnati Procurement</b> — the office that issued both RFPs. Both named and reachable in the data.</div></div>
+  </div>
+  <p class="dek" style="margin-top:30px"><b style="color:#fff">So what:</b> prospect by "police agency" record type and you'd have seen none of this — three years of an active, expanding program living entirely in city procurement and the capital budget. Now multiply by 82 agencies. <span style="color:#7E92A8">(Cincinnati is bigger than the typical Fact-3 buyer; it's here for the fullest public trail — the mechanics are identical in the small towns.)</span></p>
 </div></section>
 
 <!-- PROOF -->
@@ -348,74 +382,60 @@
   <p class="dek">A sample from the 82-agency set. Each maps to a specific RFP and source URL — a real, contactable prospect, not an aggregate.</p>
   <div class="tablewrap" style="margin-top:28px">
     <table>
-      <thead><tr><th>Agency</th><th>State</th><th>Buyer type</th><th>Solicitation</th><th>Bid type</th></tr></thead>
+      <thead><tr><th>Agency (buyer of record)</th><th>State</th><th>Buyer type</th><th>Solicitation</th><th>Bid type</th></tr></thead>
       <tbody>
-        <tr><td><span class="ag">New Jersey (statewide)</span></td><td><span class="st-tag">NJ</span></td><td>State LE contract</td><td>Law Enforcement Equipment &amp; Technology</td><td><span class="pill open">OPEN</span></td></tr>
-        <tr><td><span class="ag">Burke County</span></td><td><span class="st-tag">GA</span></td><td>County / sheriff</td><td>LPR Cameras — "comparable to Flock"</td><td><span class="pill open">OPEN</span></td></tr>
-        <tr><td><span class="ag">Albany Police Dept</span></td><td><span class="st-tag">CA</span></td><td>Municipal PD</td><td>Fixed ALPR Data System</td><td><span class="pill open">OPEN</span></td></tr>
-        <tr><td><span class="ag">Santa Monica Police Dept</span></td><td><span class="st-tag">CA</span></td><td>Municipal PD</td><td>ALPR System Cameras</td><td><span class="pill open">OPEN</span></td></tr>
-        <tr><td><span class="ag">Maryland State Police</span></td><td><span class="st-tag">MD</span></td><td>State LE</td><td>License Plate Recognition</td><td><span class="pill open">OPEN</span></td></tr>
-        <tr><td><span class="ag">Pennsylvania State Police</span></td><td><span class="st-tag">PA</span></td><td>State LE</td><td>Automated LPR</td><td><span class="pill open">OPEN</span></td></tr>
-        <tr><td><span class="ag">Metropolitan Police Dept</span></td><td><span class="st-tag">DC</span></td><td>Municipal PD</td><td>LPR Program</td><td><span class="pill open">OPEN</span></td></tr>
-        <tr><td><span class="ag">City of Cincinnati</span></td><td><span class="st-tag">OH</span></td><td>Municipal PD</td><td>Mobile LPR Camera Systems</td><td><span class="pill open">OPEN</span></td></tr>
-        <tr><td><span class="ag">New Castle County</span></td><td><span class="st-tag">DE</span></td><td>County / sheriff</td><td>LPR Hardware &amp; Software</td><td><span class="pill open">OPEN</span></td></tr>
-        <tr><td><span class="ag">St. Charles County</span></td><td><span class="st-tag">MO</span></td><td>County / sheriff</td><td>LPR Installation</td><td><span class="pill open">OPEN</span></td></tr>
-        <tr><td><span class="ag">Haines City</span></td><td><span class="st-tag">FL</span></td><td>Municipal PD</td><td>Flock Safety ALPR Cameras</td><td><span class="pill sole">SOLE-SOURCE</span></td></tr>
+        <tr><td><span class="ag">New Jersey (statewide)</span></td><td><span class="st-tag">NJ</span></td><td>State contract</td><td>Law Enforcement Equipment &amp; Technology</td><td><span class="pill open">OPEN</span></td></tr>
+        <tr><td><span class="ag">Burke County Board of Commissioners</span></td><td><span class="st-tag">GA</span></td><td>County</td><td>LPR Cameras — "comparable to Flock"</td><td><span class="pill open">OPEN</span></td></tr>
+        <tr><td><span class="ag">City of Albany</span></td><td><span class="st-tag">CA</span></td><td>Municipality</td><td>Fixed ALPR Data System</td><td><span class="pill open">OPEN</span></td></tr>
+        <tr><td><span class="ag">City of Santa Monica</span></td><td><span class="st-tag">CA</span></td><td>Municipality</td><td>ALPR System Cameras</td><td><span class="pill open">OPEN</span></td></tr>
+        <tr><td><span class="ag">Maryland State Police</span></td><td><span class="st-tag">MD</span></td><td>State agency</td><td>License Plate Recognition</td><td><span class="pill open">OPEN</span></td></tr>
+        <tr><td><span class="ag">City of Cincinnati</span></td><td><span class="st-tag">OH</span></td><td>Municipality</td><td>Mobile LPR Camera Systems</td><td><span class="pill open">OPEN</span></td></tr>
+        <tr><td><span class="ag">New Castle County</span></td><td><span class="st-tag">DE</span></td><td>County</td><td>LPR Hardware &amp; Software</td><td><span class="pill open">OPEN</span></td></tr>
+        <tr><td><span class="ag">St. Charles County</span></td><td><span class="st-tag">MO</span></td><td>County</td><td>LPR Installation</td><td><span class="pill open">OPEN</span></td></tr>
+        <tr><td><span class="ag">City of Haines City</span></td><td><span class="st-tag">FL</span></td><td>Municipality</td><td>Flock Safety ALPR Cameras</td><td><span class="pill sole">SOLE-SOURCE</span></td></tr>
       </tbody>
     </table>
   </div>
-  <p class="note">Illustrative sample. Full set: 82 named agencies + ~48 additional unresolved solicitations across 29 states.</p>
+  <p class="note">Illustrative sample. Full set: 82 named agencies + ~48 additional unresolved solicitations across 29 states. Note the buyer-of-record column: mostly cities and counties, not "police."</p>
 </div></section>
 
-<!-- PLAYBOOK -->
+<!-- WHAT TO DO -->
 <section class="dark"><div class="wrap reveal">
-  <div class="sec-num">THE PLAYBOOK</div>
-  <h2>What to do about it — four moves.</h2>
+  <div class="sec-num">WHAT TO ACTUALLY DO</div>
+  <h2>Four moves — each mapped to a finding.</h2>
   <div class="tk-grid" style="margin-top:36px">
-    <div class="tk"><div class="n">01 · FROM FACT 1</div><h3>Prospect by procurement office, not the org chart</h3><p>~90% of buying authority sits with city and county procurement acting for PDs and sheriffs. Type-based filters that hunt for "law-enforcement agencies" miss most of the market. Build your list around the buyer of record.</p></div>
-    <div class="tk"><div class="n">02 · FROM FACT 2</div><h3>Work the long tail</h3><p>The median buyer is a city of 53,000, and two-thirds are under 100k. That's where the incumbent's network advantage is weakest and references compound fastest. Hundreds of small agencies beat a dozen flagship cities.</p></div>
-    <div class="tk"><div class="n">03 · FROM FACT 3</div><h3>Get into open specs early</h3><p>Vendor-neutral and "comparable to Flock" solicitations are where a challenger can still shape requirements. The leverage is in timing: influence the spec while it's being written, not after it's published.</p></div>
-    <div class="tk"><div class="n">04 · THE BONUS</div><h3>Treat an ALPR RFP as a modernization tripwire</h3><p>An agency issuing a plate-reader solicitation has budget and tech appetite live right now — and is frequently in-market for adjacent systems (body cameras, drones, RTCC) at the same time.</p></div>
+    <div class="tk"><div class="n">FROM FACT 1</div><h3>Prospect by procurement authority, not department name</h3><p>Map both the operational agency <i>and</i> the buyer of record — city, county, finance office, board of commissioners. This alone recovers most of the pipeline you're blind to.</p></div>
+    <div class="tk"><div class="n">FROM FACT 2</div><h3>Filter for open + vendor-neutral; deprioritize sole-source</h3><p>13 of 167 are near-dead on arrival. Don't spend equally across all 167 — concentrate where the agency is formally inviting responses.</p></div>
+    <div class="tk"><div class="n">FROM FACT 2 (caveat)</div><h3>Get in before the spec hardens</h3><p>Once it's posted, requirements may already be shaped. The window is when the agency is researching, drafting, and budgeting — pre-RFP.</p></div>
+    <div class="tk"><div class="n">FROM FACT 3</div><h3>Work the sub-100k market deliberately</h3><p>It's the largest, least-mature, most-reachable slice of visible demand — and references compound through regional networks.</p></div>
   </div>
+  <p class="dek" style="margin-top:30px">One extension: an ALPR bid is rarely a single-product signal. The same agency is often modernizing RTCC software, camera networks, evidence management, CAD/RMS, body cameras, or drones. <b style="color:#fff">ALPR is a tripwire for a broader public-safety tech refresh.</b></p>
 </div></section>
 
-<!-- ADJACENT / FIRE-EMS -->
-<section><div class="wrap reveal">
-  <div class="grid-2" style="align-items:stretch">
-    <div class="card pad">
-      <div class="chart-t">A plate-reader RFP is a modernization tripwire</div>
-      <p class="body" style="font-size:15.5px">Agencies issuing ALPR solicitations are often buying adjacent technology in the same cycle. The same dataset surfaces <b>body-worn and in-car camera replacements</b> and <b>police drone / UAS</b> purchases from the same tier of department — useful whether you sell cameras, evidence management, fleet telematics, or real-time crime-center software.</p>
-    </div>
-    <div class="card pad">
-      <div class="chart-t">Selling to fire or EMS? Same signal, your category.</div>
-      <p class="body" style="font-size:15.5px">This brief profiles plate readers because that's where law-enforcement demand is loudest right now. The method — <b>counting named agencies with an open, dated buying need</b> — works identically for fire and EMS: SCBA and turnout-gear replacements, ambulance remounts, fire-apparatus RFPs, and AFG / SAFER grant cycles.</p>
-    </div>
-  </div>
-</div></section>
-
-<!-- METHODOLOGY -->
-<section style="padding-top:20px"><div class="wrap reveal">
-  <div class="method">
+<!-- WHAT THIS DOESN'T CLAIM -->
+<section><div class="wrap narrow reveal">
+  <div class="sec-num">WHAT THIS DOESN'T CLAIM</div>
+  <p class="body" style="font-size:19px; color:#2C3D50">The incumbent isn't weak. Not every open bid is winnable. And <b>167 is a floor, not the whole market</b> — pilots, co-op contracts, council approvals, and renewals never surface as competitive solicitations. The point isn't that we've sized the market. It's that the visible, contestable floor is already big enough to build a pipeline on — <b>if you're searching the right records.</b></p>
+  <div class="method" style="margin-top:36px">
     <h3>How we counted — so you can trust the pipeline</h3>
     <ul>
-      <li><span class="tk2">✓</span><span><b>Public-safety buyers only.</b> Parking enforcement, housing authorities, transit, sanitation, schools, and universities were filtered out — fire / EMS / police demand exclusively.</span></li>
-      <li><span class="tk2">✓</span><span><b>Counts, not dollars.</b> We measure how many agencies are soliciting — the cleanest demand signal. Underlying dollar fields are unreliable and were not used.</span></li>
-      <li><span class="tk2">✓</span><span><b>Deduplicated and conservative.</b> Reposted and "updated" listings were collapsed by normalized source URL; ~48 records couldn't be resolved to a named agency, so every figure is a floor.</span></li>
-      <li><span class="tk2">✓</span><span><b>Intent, not awards.</b> These are solicitations — how deals are opened and structured, not who ultimately won them. Every named agency traces to a specific RFP and source URL.</span></li>
-      <li><span class="tk2">✓</span><span><b>Visible demand only.</b> Deals the incumbent closes before an RFP — pilots, direct approvals, cooperative contracts — fall outside the dataset. This is a floor on <i>contestable</i> demand, not total market share.</span></li>
+      <li><span class="tk2">✓</span><span><b>Public-safety buyers only.</b> Parking enforcement, housing authorities, transit, schools, and universities were filtered out.</span></li>
+      <li><span class="tk2">✓</span><span><b>Counts, not dollars.</b> We measure how many agencies are soliciting — the cleanest demand signal. Dollar fields were not aggregated.</span></li>
+      <li><span class="tk2">✓</span><span><b>Deduplicated &amp; conservative.</b> Reposts collapsed by source URL; ~48 records couldn't be resolved to a named agency — every figure is a floor.</span></li>
+      <li><span class="tk2">✓</span><span><b>Intent &amp; visible demand only.</b> Solicitations, not awards. Pre-RFP deals (pilots, co-ops) sit outside the data by definition.</span></li>
     </ul>
-    <p class="note" style="margin-top:24px">Source: NationGraph RFP / solicitation index. Coverage Jan 2024 – Jun 2026. Records for this category extend to 2009 but are sparse before 2024, so we report current breadth — not a year-over-year growth rate.</p>
+    <p class="note" style="margin-top:22px">Source: NationGraph RFP / solicitation index. Coverage Jan 2024 – Jun 2026; records extend to 2009 but are sparse before 2024, so we report current breadth — not a growth rate.</p>
   </div>
 </div></section>
 
-<!-- FOOTER -->
+<!-- TAKEAWAY / CTA -->
 <footer><div class="wrap">
   <div class="cta reveal">
-    <div>
-      <h3>This brief is one query. Your market is the next one.</h3>
-      <p>NationGraph turns public-sector buying signals into named, contactable demand — so your team can act before the RFP drops.</p>
+    <div class="big">The ALPR market isn't hidden because agencies aren't buying. <span class="accent">It's hidden because the buying signal is attached to the wrong record.</span></div>
+    <div class="row">
+      <p>The vendors who win surface those signals first, sort the contestable from the pre-wired, and reach the buyer before the requirements set. That's not a prospecting-effort problem — it's a data problem, and data problems have answers.</p>
+      <a class="btn" href="https://nationgraph.com">Predict &amp; Win →</a>
     </div>
-    <a class="btn" href="https://nationgraph.com">Predict &amp; Win →</a>
   </div>
   <div class="foot-meta">
     <div class="foot-brand">
@@ -427,60 +447,6 @@
 </div></footer>
 
 <script>
-// ---------- data ----------
-const CADENCE = [
-  ["2024-01",0],["2024-02",0],["2024-03",6],["2024-04",1],["2024-05",5],["2024-06",4],
-  ["2024-07",3],["2024-08",8],["2024-09",5],["2024-10",2],["2024-11",7],["2024-12",6],
-  ["2025-01",2],["2025-02",8],["2025-03",5],["2025-04",5],["2025-05",0],["2025-06",7],
-  ["2025-07",8],["2025-08",13],["2025-09",8],["2025-10",10],["2025-11",4],["2025-12",2],
-  ["2026-01",9],["2026-02",14],["2026-03",5],["2026-04",5],["2026-05",7],["2026-06",8]
-];
-const STATES = [
-  ["California",14],["North Carolina",12],["Florida",11],["New York",10],["Texas",10],
-  ["Pennsylvania",8],["Ohio",7],["Colorado",5],["Maryland",5],["Georgia",4],["Iowa",4],
-  ["Washington DC",3],["Mississippi",3],["Oregon",3],["Massachusetts",2],["Nebraska",2],
-  ["New Jersey",2],["Wisconsin",2]
-];
-
-// ---------- state bars ----------
-(function(){
-  const max=14, host=document.getElementById('stateBars');
-  STATES.forEach(([name,n])=>{
-    const row=document.createElement('div'); row.className='bar-row';
-    row.innerHTML=`<div class="k">${name}</div><div class="track"><div class="fill" data-w="${(n/max*100).toFixed(1)}"></div></div><div class="v">${n}</div>`;
-    host.appendChild(row);
-  });
-})();
-
-// ---------- cadence area chart ----------
-(function(){
-  const W=1040,H=300, padL=34,padR=16,padT=24,padB=46;
-  const max=15;
-  const xs=(i)=> padL + i*(W-padL-padR)/(CADENCE.length-1);
-  const ys=(v)=> padT + (1-v/max)*(H-padT-padB);
-  let line='', area='';
-  CADENCE.forEach(([m,v],i)=>{ const x=xs(i),y=ys(v); line+=(i?'L':'M')+x.toFixed(1)+' '+y.toFixed(1)+' '; });
-  area = line + `L${xs(CADENCE.length-1).toFixed(1)} ${ys(0)} L${xs(0).toFixed(1)} ${ys(0)} Z`;
-  let grid='';
-  [0,5,10,15].forEach(g=>{ const y=ys(g); grid+=`<line x1="${padL}" y1="${y}" x2="${W-padR}" y2="${y}" stroke="#EEF2F7" stroke-width="1"/><text x="${padL-8}" y="${y+3}" text-anchor="end" class="axis">${g}</text>`; });
-  let xlab=''; const MON={'01':'Jan','04':'Apr','07':'Jul','10':'Oct'};
-  CADENCE.forEach(([m],i)=>{ const mm=m.slice(5); if(MON[mm]){ xlab+=`<text x="${xs(i)}" y="${H-padB+22}" text-anchor="middle" class="axis">${MON[mm]} ’${m.slice(2,4)}</text>`; } });
-  let dots='';
-  CADENCE.forEach(([m,v],i)=>{ if(v>0) dots+=`<circle cx="${xs(i)}" cy="${ys(v)}" r="2.4" fill="#0A7E72"/>`; });
-  const peakI=CADENCE.findIndex(d=>d[1]===14);
-  const px=xs(peakI), py=ys(14);
-  const annot=`<line x1="${px}" y1="${py}" x2="${px}" y2="${py-30}" stroke="#0A1A30" stroke-width="1" stroke-dasharray="2 2"/><circle cx="${px}" cy="${py}" r="4" fill="#10B6A5" stroke="#fff" stroke-width="1.5"/><text x="${px-4}" y="${py-38}" text-anchor="middle" class="annot-b">Feb 2026 — 14 bids</text><text x="${px-4}" y="${py-24}" text-anchor="middle" class="annot">single biggest month</text>`;
-  document.getElementById('cadence').innerHTML=
-    `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Monthly plate-reader solicitations, March 2024 to June 2026, peaking at 14 in February 2026.">
-      <defs><linearGradient id="ag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#10B6A5" stop-opacity=".34"/><stop offset="1" stop-color="#10B6A5" stop-opacity="0"/></linearGradient></defs>
-      ${grid}
-      <path d="${area}" fill="url(#ag)" class="cad-area" style="opacity:0; transition:opacity 1s ease .2s"/>
-      <path d="${line}" fill="none" stroke="#0A7E72" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" class="cad-line"/>
-      ${dots}${xlab}${annot}
-    </svg>`;
-})();
-
-// ---------- count-up + reveal + bar animation ----------
 function animateCount(el){
   const target=+el.dataset.count, dur=1300, t0=performance.now();
   function step(t){ const p=Math.min(1,(t-t0)/dur); const e=1-Math.pow(1-p,3); el.textContent=Math.round(e*target); if(p<1) requestAnimationFrame(step); }
@@ -489,12 +455,12 @@ function animateCount(el){
 const io=new IntersectionObserver((ents)=>{
   ents.forEach(e=>{ if(!e.isIntersecting) return;
     const el=e.target; el.classList.add('in');
-    el.querySelectorAll && el.querySelectorAll('[data-count]').forEach(animateCount);
-    el.querySelectorAll && el.querySelectorAll('.fill[data-w]').forEach(f=>{ f.style.width=f.dataset.w+'%'; });
-    if(el.querySelector){ const ca=el.querySelector('.cad-area'); if(ca) ca.style.opacity=1; const cl=el.querySelector('.cad-line'); if(cl){ const len=cl.getTotalLength(); cl.style.strokeDasharray=len; cl.style.strokeDashoffset=len; cl.getBoundingClientRect(); cl.style.transition='stroke-dashoffset 1.6s ease .15s'; cl.style.strokeDashoffset=0; } }
+    el.querySelectorAll('[data-count]').forEach(animateCount);
+    el.querySelectorAll('.fill[data-w]').forEach(f=>{ f.style.width=f.dataset.w+'%'; });
+    el.querySelectorAll('.vbar[data-h]').forEach(b=>{ b.style.height=b.dataset.h+'%'; });
     io.unobserve(el);
   });
-},{threshold:.16});
+},{threshold:.15});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 </body>

@@ -12,6 +12,9 @@ Most of the police license-plate-reader market is bid out **in the open**, to bu
 - **WHERE (53k)** — the demand is small-town America: median municipal buyer ~53,000; two-thirds under 100k. (n=48 w/ population)
 - **HOW (154/167)** — it's bid out in the open: 154 of 167 are open competitive bids, 89% name no vendor — the spec is still shapeable.
 
+## Anatomy of a deal (worked example)
+Cincinnati, OH walked end-to-end: 2022 Vigilant LPR term-contract RFP → 2023 mobile-LPR RFP → FY2026–27 Approved Capital Budget line ($300K, "Police Fixed License Plate Reader Cameras") → on-file Chief (Theetge). Every record sits under the City (Municipality), none under a "police agency" — the blindspot in motion.
+
 ## Scope & guardrails
 - 167 solicitations · 82 agencies · 29 states · Jan 2024 – Jun 2026.
 - **Counts, not dollars. Intent, not awards. Visible (RFP) demand only.** Every figure is a floor (deduped; ~48 unresolved records excluded).
